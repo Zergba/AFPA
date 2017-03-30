@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static ABIMS.RessourcesString;
 
 namespace ABIMS
 {
@@ -16,7 +17,5 @@ namespace ABIMS
         {
             InitializeComponent();
         }
-
-       
     }
 }

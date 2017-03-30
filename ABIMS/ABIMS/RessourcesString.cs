@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ABIMS
 {
-    class RessourcesString
+    public class RessourcesString
     {
         private const String strTitle = "ABIMS - ";
         private const String strSearch = "Rechercher";
@@ -17,6 +17,7 @@ namespace ABIMS
         private const String strProject = "Projet";
         private const String strClientMgt = "Gestion client";
         private const String strAddClient = "Ajouter un client";
+        private const String strAddClients = "Ajouter les clients";
         private const String strSeeClients = "Voir les clients";
         private const String strDeleteClients = "Supprimer les clients";
         private const String strWindows = "Fenêtres";
@@ -431,6 +432,14 @@ namespace ABIMS
             get
             {
                 return strSeeTheSheet;
+            }
+        }
+
+        public static string StrAddClients
+        {
+            get
+            {
+                return strAddClients;
             }
         }
     }

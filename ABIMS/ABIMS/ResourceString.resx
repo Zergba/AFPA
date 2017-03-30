@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="strActivityDomain" xml:space="preserve">
+    <value>"Domaine d'activité"</value>
+  </data>
+  <data name="strAddClient" xml:space="preserve">
+    <value>"Ajouter un client"</value>
+  </data>
+  <data name="strAddClients" xml:space="preserve">
+    <value>"Ajouter les clients"</value>
+  </data>
+  <data name="strAddContact" xml:space="preserve">
+    <value>"Ajouter contact"</value>
+  </data>
+  <data name="strAdress" xml:space="preserve">
+    <value>"Adresse"</value>
+  </data>
+  <data name="strCancelCreation" xml:space="preserve">
+    <value>"Annuler la création"</value>
+  </data>
+  <data name="strCancelModification" xml:space="preserve">
+    <value>"Annuler les modifications"</value>
+  </data>
+  <data name="strClient" xml:space="preserve">
+    <value>"Client"</value>
+  </data>
+  <data name="strClientList" xml:space="preserve">
+    <value>"Liste de clients"</value>
+  </data>
+  <data name="strClientMgt" xml:space="preserve">
+    <value>"Gestion client"</value>
+  </data>
+  <data name="strCloseWindows" xml:space="preserve">
+    <value>"Fermer toutes les fenêtres"</value>
+  </data>
+  <data name="strComm" xml:space="preserve">
+    <value>"Commentaires"</value>
+  </data>
+  <data name="strContact" xml:space="preserve">
+    <value>"Contact"</value>
+  </data>
+  <data name="strContacts" xml:space="preserve">
+    <value>"Contacts"</value>
+  </data>
+  <data name="strDeleteClient" xml:space="preserve">
+    <value>"Supprimer le client"</value>
+  </data>
+  <data name="strDeleteClients" xml:space="preserve">
+    <value>"Supprimer les clients"</value>
+  </data>
+  <data name="strDeleteContact" xml:space="preserve">
+    <value>"Supprimer le contact"</value>
+  </data>
+  <data name="strDetail" xml:space="preserve">
+    <value>"Détail"</value>
+  </data>
+  <data name="strDetailClient" xml:space="preserve">
+    <value>"Détail Client"</value>
+  </data>
+  <data name="strDropList" xml:space="preserve">
+    <value>"Vider liste"</value>
+  </data>
+  <data name="strEmail" xml:space="preserve">
+    <value>"Email"</value>
+  </data>
+  <data name="strFirsName" xml:space="preserve">
+    <value>"Prénom"</value>
+  </data>
+  <data name="strFunction" xml:space="preserve">
+    <value>"Fonction"</value>
+  </data>
+  <data name="strInterventionDuration" xml:space="preserve">
+    <value>"Durée d'intervention"</value>
+  </data>
+  <data name="strKeepOpen" xml:space="preserve">
+    <value>"Garder ouvert"</value>
+  </data>
+  <data name="strList" xml:space="preserve">
+    <value>"Liste"</value>
+  </data>
+  <data name="strModification" xml:space="preserve">
+    <value>"Modification"</value>
+  </data>
+  <data name="strModifyContact" xml:space="preserve">
+    <value>"Modifier le contact"</value>
+  </data>
+  <data name="strName" xml:space="preserve">
+    <value>"Nom"</value>
+  </data>
+  <data name="strNature" xml:space="preserve">
+    <value>"Nature"</value>
+  </data>
+  <data name="strPhone" xml:space="preserve">
+    <value>"Téléphone"</value>
+  </data>
+  <data name="strProject" xml:space="preserve">
+    <value>"Projet"</value>
+  </data>
+  <data name="strReopenClient" xml:space="preserve">
+    <value>"Réouvrir le client"</value>
+  </data>
+  <data name="strSalesRevenu" xml:space="preserve">
+    <value>"Chiffre d'affaire"</value>
+  </data>
+  <data name="strSearch" xml:space="preserve">
+    <value>"Rechercher"</value>
+  </data>
+  <data name="strSearchSentence" xml:space="preserve">
+    <value>"Saisir les termes de votre recherche"</value>
+  </data>
+  <data name="strSeeClients" xml:space="preserve">
+    <value>"Voir les clients"</value>
+  </data>
+  <data name="strSeeTheSheet" xml:space="preserve">
+    <value>"Voir la fiche après la création"</value>
+  </data>
+  <data name="strShowList" xml:space="preserve">
+    <value>"Afficher liste"</value>
+  </data>
+  <data name="strSocietyName" xml:space="preserve">
+    <value>"Raison sociale"</value>
+  </data>
+  <data name="strStaff" xml:space="preserve">
+    <value>"Effectif"</value>
+  </data>
+  <data name="strSupprimer" xml:space="preserve">
+    <value>"le contact"</value>
+  </data>
+  <data name="strTitle" xml:space="preserve">
+    <value>"ABIMS - "</value>
+  </data>
+  <data name="strType" xml:space="preserve">
+    <value>"Type"</value>
+  </data>
+  <data name="strValidCreation" xml:space="preserve">
+    <value>"Valider la creation"</value>
+  </data>
+  <data name="strValidModification" xml:space="preserve">
+    <value>"Valider les modifications"</value>
+  </data>
+  <data name="strWindows" xml:space="preserve">
+    <value>"Fenêtres"</value>
+  </data>
+</root>
