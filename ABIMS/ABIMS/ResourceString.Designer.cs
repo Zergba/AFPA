@@ -61,7 +61,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Domaine d&apos;activité&quot;.
+        ///   Recherche une chaîne localisée semblable à Domaine d&apos;activité.
         /// </summary>
         internal static string strActivityDomain {
             get {
@@ -70,7 +70,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Ajouter un client&quot;.
+        ///   Recherche une chaîne localisée semblable à Ajouter un client.
         /// </summary>
         internal static string strAddClient {
             get {
@@ -79,7 +79,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Ajouter les clients&quot;.
+        ///   Recherche une chaîne localisée semblable à Ajouter les clients.
         /// </summary>
         internal static string strAddClients {
             get {
@@ -88,7 +88,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Ajouter contact&quot;.
+        ///   Recherche une chaîne localisée semblable à Ajouter contact.
         /// </summary>
         internal static string strAddContact {
             get {
@@ -97,7 +97,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Adresse&quot;.
+        ///   Recherche une chaîne localisée semblable à Adresse.
         /// </summary>
         internal static string strAdress {
             get {
@@ -106,7 +106,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Annuler la création&quot;.
+        ///   Recherche une chaîne localisée semblable à Annuler la création.
         /// </summary>
         internal static string strCancelCreation {
             get {
@@ -115,7 +115,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Annuler les modifications&quot;.
+        ///   Recherche une chaîne localisée semblable à Annuler les modifications.
         /// </summary>
         internal static string strCancelModification {
             get {
@@ -124,7 +124,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Client&quot;.
+        ///   Recherche une chaîne localisée semblable à Client.
         /// </summary>
         internal static string strClient {
             get {
@@ -133,7 +133,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Liste de clients&quot;.
+        ///   Recherche une chaîne localisée semblable à Liste de clients.
         /// </summary>
         internal static string strClientList {
             get {
@@ -142,7 +142,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Gestion client&quot;.
+        ///   Recherche une chaîne localisée semblable à Gestion client.
         /// </summary>
         internal static string strClientMgt {
             get {
@@ -151,7 +151,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Fermer toutes les fenêtres&quot;.
+        ///   Recherche une chaîne localisée semblable à Fermer toutes les fenêtres.
         /// </summary>
         internal static string strCloseWindows {
             get {
@@ -160,7 +160,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Commentaires&quot;.
+        ///   Recherche une chaîne localisée semblable à Commentaires.
         /// </summary>
         internal static string strComm {
             get {
@@ -169,7 +169,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Contact&quot;.
+        ///   Recherche une chaîne localisée semblable à Contact.
         /// </summary>
         internal static string strContact {
             get {
@@ -178,7 +178,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Contacts&quot;.
+        ///   Recherche une chaîne localisée semblable à Contacts.
         /// </summary>
         internal static string strContacts {
             get {
@@ -187,7 +187,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Supprimer le client&quot;.
+        ///   Recherche une chaîne localisée semblable à Supprimer le client.
         /// </summary>
         internal static string strDeleteClient {
             get {
@@ -196,7 +196,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Supprimer les clients&quot;.
+        ///   Recherche une chaîne localisée semblable à Supprimer les clients.
         /// </summary>
         internal static string strDeleteClients {
             get {
@@ -205,7 +205,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Supprimer le contact&quot;.
+        ///   Recherche une chaîne localisée semblable à Supprimer le contact.
         /// </summary>
         internal static string strDeleteContact {
             get {
@@ -214,7 +214,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Détail&quot;.
+        ///   Recherche une chaîne localisée semblable à Détail.
         /// </summary>
         internal static string strDetail {
             get {
@@ -223,7 +223,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Détail Client&quot;.
+        ///   Recherche une chaîne localisée semblable à Détail Client.
         /// </summary>
         internal static string strDetailClient {
             get {
@@ -232,7 +232,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Vider liste&quot;.
+        ///   Recherche une chaîne localisée semblable à Vider liste.
         /// </summary>
         internal static string strDropList {
             get {
@@ -241,7 +241,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Email&quot;.
+        ///   Recherche une chaîne localisée semblable à Email.
         /// </summary>
         internal static string strEmail {
             get {
@@ -250,7 +250,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Prénom&quot;.
+        ///   Recherche une chaîne localisée semblable à Prénom.
         /// </summary>
         internal static string strFirsName {
             get {
@@ -259,7 +259,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Fonction&quot;.
+        ///   Recherche une chaîne localisée semblable à Fonction.
         /// </summary>
         internal static string strFunction {
             get {
@@ -268,7 +268,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Durée d&apos;intervention&quot;.
+        ///   Recherche une chaîne localisée semblable à Durée d&apos;intervention.
         /// </summary>
         internal static string strInterventionDuration {
             get {
@@ -277,7 +277,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Garder ouvert&quot;.
+        ///   Recherche une chaîne localisée semblable à Garder ouvert.
         /// </summary>
         internal static string strKeepOpen {
             get {
@@ -286,7 +286,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Liste&quot;.
+        ///   Recherche une chaîne localisée semblable à Liste.
         /// </summary>
         internal static string strList {
             get {
@@ -295,7 +295,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Modification&quot;.
+        ///   Recherche une chaîne localisée semblable à Modification.
         /// </summary>
         internal static string strModification {
             get {
@@ -304,7 +304,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Modifier le contact&quot;.
+        ///   Recherche une chaîne localisée semblable à Modifier le contact.
         /// </summary>
         internal static string strModifyContact {
             get {
@@ -313,7 +313,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Nom&quot;.
+        ///   Recherche une chaîne localisée semblable à Nom.
         /// </summary>
         internal static string strName {
             get {
@@ -322,7 +322,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Nature&quot;.
+        ///   Recherche une chaîne localisée semblable à Nature.
         /// </summary>
         internal static string strNature {
             get {
@@ -331,7 +331,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Téléphone&quot;.
+        ///   Recherche une chaîne localisée semblable à Téléphone.
         /// </summary>
         internal static string strPhone {
             get {
@@ -340,7 +340,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Projet&quot;.
+        ///   Recherche une chaîne localisée semblable à Projet.
         /// </summary>
         internal static string strProject {
             get {
@@ -349,7 +349,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Réouvrir le client&quot;.
+        ///   Recherche une chaîne localisée semblable à Réouvrir le client.
         /// </summary>
         internal static string strReopenClient {
             get {
@@ -358,7 +358,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Chiffre d&apos;affaire&quot;.
+        ///   Recherche une chaîne localisée semblable à Chiffre d&apos;affaire.
         /// </summary>
         internal static string strSalesRevenu {
             get {
@@ -367,7 +367,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Rechercher&quot;.
+        ///   Recherche une chaîne localisée semblable à Rechercher.
         /// </summary>
         internal static string strSearch {
             get {
@@ -376,7 +376,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Saisir les termes de votre recherche&quot;.
+        ///   Recherche une chaîne localisée semblable à Saisir les termes de votre recherche.
         /// </summary>
         internal static string strSearchSentence {
             get {
@@ -385,7 +385,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Voir les clients&quot;.
+        ///   Recherche une chaîne localisée semblable à Voir les clients.
         /// </summary>
         internal static string strSeeClients {
             get {
@@ -394,7 +394,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Voir la fiche après la création&quot;.
+        ///   Recherche une chaîne localisée semblable à Voir la fiche après la création.
         /// </summary>
         internal static string strSeeTheSheet {
             get {
@@ -403,7 +403,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Afficher liste&quot;.
+        ///   Recherche une chaîne localisée semblable à Afficher liste.
         /// </summary>
         internal static string strShowList {
             get {
@@ -412,7 +412,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Raison sociale&quot;.
+        ///   Recherche une chaîne localisée semblable à Raison sociale.
         /// </summary>
         internal static string strSocietyName {
             get {
@@ -421,7 +421,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Effectif&quot;.
+        ///   Recherche une chaîne localisée semblable à Effectif.
         /// </summary>
         internal static string strStaff {
             get {
@@ -430,7 +430,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;le contact&quot;.
+        ///   Recherche une chaîne localisée semblable à Supprimer le contact.
         /// </summary>
         internal static string strSupprimer {
             get {
@@ -439,7 +439,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;ABIMS - &quot;.
+        ///   Recherche une chaîne localisée semblable à ABIMS - .
         /// </summary>
         internal static string strTitle {
             get {
@@ -448,7 +448,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Type&quot;.
+        ///   Recherche une chaîne localisée semblable à Type.
         /// </summary>
         internal static string strType {
             get {
@@ -457,7 +457,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Valider la creation&quot;.
+        ///   Recherche une chaîne localisée semblable à Valider la creation.
         /// </summary>
         internal static string strValidCreation {
             get {
@@ -466,7 +466,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Valider les modifications&quot;.
+        ///   Recherche une chaîne localisée semblable à Valider les modifications.
         /// </summary>
         internal static string strValidModification {
             get {
@@ -475,7 +475,7 @@ namespace ABIMS {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à &quot;Fenêtres&quot;.
+        ///   Recherche une chaîne localisée semblable à Fenêtres.
         /// </summary>
         internal static string strWindows {
             get {

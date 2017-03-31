@@ -118,144 +118,144 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="strActivityDomain" xml:space="preserve">
-    <value>"Domaine d'activité"</value>
+    <value>Domaine d'activité</value>
   </data>
   <data name="strAddClient" xml:space="preserve">
-    <value>"Ajouter un client"</value>
+    <value>Ajouter un client</value>
   </data>
   <data name="strAddClients" xml:space="preserve">
-    <value>"Ajouter les clients"</value>
+    <value>Ajouter les clients</value>
   </data>
   <data name="strAddContact" xml:space="preserve">
-    <value>"Ajouter contact"</value>
+    <value>Ajouter contact</value>
   </data>
   <data name="strAdress" xml:space="preserve">
-    <value>"Adresse"</value>
+    <value>Adresse</value>
   </data>
   <data name="strCancelCreation" xml:space="preserve">
-    <value>"Annuler la création"</value>
+    <value>Annuler la création</value>
   </data>
   <data name="strCancelModification" xml:space="preserve">
-    <value>"Annuler les modifications"</value>
+    <value>Annuler les modifications</value>
   </data>
   <data name="strClient" xml:space="preserve">
-    <value>"Client"</value>
+    <value>Client</value>
   </data>
   <data name="strClientList" xml:space="preserve">
-    <value>"Liste de clients"</value>
+    <value>Liste de clients</value>
   </data>
   <data name="strClientMgt" xml:space="preserve">
-    <value>"Gestion client"</value>
+    <value>Gestion client</value>
   </data>
   <data name="strCloseWindows" xml:space="preserve">
-    <value>"Fermer toutes les fenêtres"</value>
+    <value>Fermer toutes les fenêtres</value>
   </data>
   <data name="strComm" xml:space="preserve">
-    <value>"Commentaires"</value>
+    <value>Commentaires</value>
   </data>
   <data name="strContact" xml:space="preserve">
-    <value>"Contact"</value>
+    <value>Contact</value>
   </data>
   <data name="strContacts" xml:space="preserve">
-    <value>"Contacts"</value>
+    <value>Contacts</value>
   </data>
   <data name="strDeleteClient" xml:space="preserve">
-    <value>"Supprimer le client"</value>
+    <value>Supprimer le client</value>
   </data>
   <data name="strDeleteClients" xml:space="preserve">
-    <value>"Supprimer les clients"</value>
+    <value>Supprimer les clients</value>
   </data>
   <data name="strDeleteContact" xml:space="preserve">
-    <value>"Supprimer le contact"</value>
+    <value>Supprimer le contact</value>
   </data>
   <data name="strDetail" xml:space="preserve">
-    <value>"Détail"</value>
+    <value>Détail</value>
   </data>
   <data name="strDetailClient" xml:space="preserve">
-    <value>"Détail Client"</value>
+    <value>Détail Client</value>
   </data>
   <data name="strDropList" xml:space="preserve">
-    <value>"Vider liste"</value>
+    <value>Vider liste</value>
   </data>
   <data name="strEmail" xml:space="preserve">
-    <value>"Email"</value>
+    <value>Email</value>
   </data>
   <data name="strFirsName" xml:space="preserve">
-    <value>"Prénom"</value>
+    <value>Prénom</value>
   </data>
   <data name="strFunction" xml:space="preserve">
-    <value>"Fonction"</value>
+    <value>Fonction</value>
   </data>
   <data name="strInterventionDuration" xml:space="preserve">
-    <value>"Durée d'intervention"</value>
+    <value>Durée d'intervention</value>
   </data>
   <data name="strKeepOpen" xml:space="preserve">
-    <value>"Garder ouvert"</value>
+    <value>Garder ouvert</value>
   </data>
   <data name="strList" xml:space="preserve">
-    <value>"Liste"</value>
+    <value>Liste</value>
   </data>
   <data name="strModification" xml:space="preserve">
-    <value>"Modification"</value>
+    <value>Modification</value>
   </data>
   <data name="strModifyContact" xml:space="preserve">
-    <value>"Modifier le contact"</value>
+    <value>Modifier le contact</value>
   </data>
   <data name="strName" xml:space="preserve">
-    <value>"Nom"</value>
+    <value>Nom</value>
   </data>
   <data name="strNature" xml:space="preserve">
-    <value>"Nature"</value>
+    <value>Nature</value>
   </data>
   <data name="strPhone" xml:space="preserve">
-    <value>"Téléphone"</value>
+    <value>Téléphone</value>
   </data>
   <data name="strProject" xml:space="preserve">
-    <value>"Projet"</value>
+    <value>Projet</value>
   </data>
   <data name="strReopenClient" xml:space="preserve">
-    <value>"Réouvrir le client"</value>
+    <value>Réouvrir le client</value>
   </data>
   <data name="strSalesRevenu" xml:space="preserve">
-    <value>"Chiffre d'affaire"</value>
+    <value>Chiffre d'affaire</value>
   </data>
   <data name="strSearch" xml:space="preserve">
-    <value>"Rechercher"</value>
+    <value>Rechercher</value>
   </data>
   <data name="strSearchSentence" xml:space="preserve">
-    <value>"Saisir les termes de votre recherche"</value>
+    <value>Saisir les termes de votre recherche</value>
   </data>
   <data name="strSeeClients" xml:space="preserve">
-    <value>"Voir les clients"</value>
+    <value>Voir les clients</value>
   </data>
   <data name="strSeeTheSheet" xml:space="preserve">
-    <value>"Voir la fiche après la création"</value>
+    <value>Voir la fiche après la création</value>
   </data>
   <data name="strShowList" xml:space="preserve">
-    <value>"Afficher liste"</value>
+    <value>Afficher liste</value>
   </data>
   <data name="strSocietyName" xml:space="preserve">
-    <value>"Raison sociale"</value>
+    <value>Raison sociale</value>
   </data>
   <data name="strStaff" xml:space="preserve">
-    <value>"Effectif"</value>
+    <value>Effectif</value>
   </data>
   <data name="strSupprimer" xml:space="preserve">
-    <value>"le contact"</value>
+    <value>Supprimer le contact</value>
   </data>
   <data name="strTitle" xml:space="preserve">
-    <value>"ABIMS - "</value>
+    <value>ABIMS - </value>
   </data>
   <data name="strType" xml:space="preserve">
-    <value>"Type"</value>
+    <value>Type</value>
   </data>
   <data name="strValidCreation" xml:space="preserve">
-    <value>"Valider la creation"</value>
+    <value>Valider la creation</value>
   </data>
   <data name="strValidModification" xml:space="preserve">
-    <value>"Valider les modifications"</value>
+    <value>Valider les modifications</value>
   </data>
   <data name="strWindows" xml:space="preserve">
-    <value>"Fenêtres"</value>
+    <value>Fenêtres</value>
   </data>
 </root>
