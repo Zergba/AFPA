@@ -30,9 +30,6 @@ namespace ABIMS
         /// </summary>
         private void InitializeComponent()
         {
-
-           // ResourceManager LocRM = new ResourceManager("ResourceStrings", typeof(ListClient).Assembly);
-
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -91,7 +88,7 @@ namespace ABIMS
             this.groupBox1.Size = new System.Drawing.Size(200, 123);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = RessourcesString.StrSearch;
+            this.groupBox1.Text = "Rechercher";
             // 
             // button1
             // 
@@ -99,8 +96,7 @@ namespace ABIMS
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 23);
             this.button1.TabIndex = 5;
-            this.button1.Text = RessourcesString.StrSearch;
-
+            this.button1.Text = "Rechercher";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
@@ -109,7 +105,7 @@ namespace ABIMS
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(187, 20);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = RessourcesString.StrSearchSentence;
+            this.textBox1.Text = "Saisir les termes de votre recherche";
             // 
             // checkBox4
             // 
@@ -118,7 +114,7 @@ namespace ABIMS
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(53, 17);
             this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = RessourcesString.StrProject;
+            this.checkBox4.Text = "Projet";
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // checkBox3
@@ -126,9 +122,9 @@ namespace ABIMS
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(7, 44);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(63, 17);
+            this.checkBox3.Size = new System.Drawing.Size(52, 17);
             this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = RessourcesString.StrClient;
+            this.checkBox3.Text = "Client";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox2
@@ -138,7 +134,7 @@ namespace ABIMS
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(52, 17);
             this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = RessourcesString.StrClient;
+            this.checkBox2.Text = "Client";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
@@ -148,7 +144,7 @@ namespace ABIMS
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(63, 17);
             this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = RessourcesString.StrNumber;
+            this.checkBox1.Text = "Numéro";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -160,7 +156,7 @@ namespace ABIMS
             this.groupBox2.Size = new System.Drawing.Size(200, 80);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = RessourcesString.StrList;
+            this.groupBox2.Text = "Liste";
             // 
             // button3
             // 
@@ -168,7 +164,7 @@ namespace ABIMS
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(187, 23);
             this.button3.TabIndex = 1;
-            this.button3.Text = RessourcesString.StrDropList;
+            this.button3.Text = "Vider liste";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -177,7 +173,7 @@ namespace ABIMS
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 23);
             this.button2.TabIndex = 0;
-            this.button2.Text = RessourcesString.StrShowList;
+            this.button2.Text = "Afficher liste";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -190,7 +186,7 @@ namespace ABIMS
             this.groupBox3.Size = new System.Drawing.Size(200, 107);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = RessourcesString.StrClientMgt;
+            this.groupBox3.Text = "Gestion client";
             // 
             // button6
             // 
@@ -198,7 +194,7 @@ namespace ABIMS
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(187, 23);
             this.button6.TabIndex = 2;
-            this.button6.Text = RessourcesString.StrDeleteClients;
+            this.button6.Text = "Supprimer les clients";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -207,7 +203,7 @@ namespace ABIMS
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(187, 23);
             this.button5.TabIndex = 1;
-            this.button5.Text = RessourcesString.StrSeeClients;
+            this.button5.Text = "Voir les clients";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -216,7 +212,7 @@ namespace ABIMS
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(187, 23);
             this.button4.TabIndex = 0;
-            this.button4.Text = ResourceString.strAddClients;
+            this.button4.Text = global::ABIMS.ResourceString.strAddClients;
             this.button4.UseVisualStyleBackColor = true;
             // 
             // groupBox4
@@ -229,7 +225,7 @@ namespace ABIMS
             this.groupBox4.Size = new System.Drawing.Size(200, 107);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = ResourceString.strWindows;
+            this.groupBox4.Text = "Fenêtres";
             // 
             // button8
             // 
@@ -237,7 +233,7 @@ namespace ABIMS
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(187, 23);
             this.button8.TabIndex = 2;
-            this.button8.Text = ResourceString.strCloseWindows;
+            this.button8.Text = global::ABIMS.ResourceString.strCloseWindows;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -246,7 +242,7 @@ namespace ABIMS
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(187, 23);
             this.button7.TabIndex = 1;
-            this.button7.Text = ResourceString.strReopenClient;
+            this.button7.Text = global::ABIMS.ResourceString.strReopenClient;
             this.button7.UseVisualStyleBackColor = true;
             // 
             // comboBox1
@@ -277,7 +273,7 @@ namespace ABIMS
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "ListClient";
-            this.Text = RessourcesString.StrTitle+RessourcesString.StrClientList;
+            this.Text = "ABIMS - Liste de clients";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
