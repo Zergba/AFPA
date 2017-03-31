@@ -45,7 +45,7 @@ namespace ABIMS
             return null;
         }
 
-        public IList<Client>findClientByName(String Name)
+        public List<Client>findClientByName(String Name)
         {
             List<Client> result = new List<Client>();
             foreach (Client client in this.listClients)
