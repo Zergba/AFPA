@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using static ABIMS.RessourcesString;
+using System.Resources;
 
 namespace ABIMS
 {
@@ -15,6 +15,8 @@ namespace ABIMS
     {
         public ListClient()
         {
+          
+           
             InitializeComponent();
         }
     }

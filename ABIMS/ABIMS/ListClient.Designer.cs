@@ -1,4 +1,6 @@
-﻿namespace ABIMS
+﻿using System.Resources;
+
+namespace ABIMS
 {
     partial class ListClient
     {
@@ -28,6 +30,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+
+           // ResourceManager LocRM = new ResourceManager("ResourceStrings", typeof(ListClient).Assembly);
+
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -94,7 +99,8 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 23);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Rechercher";
+            this.button1.Text = RessourcesString.StrSearch;
+
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
@@ -154,7 +160,7 @@
             this.groupBox2.Size = new System.Drawing.Size(200, 80);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Liste";
+            this.groupBox2.Text = RessourcesString.StrList;
             // 
             // button3
             // 
@@ -162,7 +168,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(187, 23);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Vider liste";
+            this.button3.Text = RessourcesString.StrDropList;
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -171,7 +177,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 23);
             this.button2.TabIndex = 0;
-            this.button2.Text = "Afficher liste";
+            this.button2.Text = RessourcesString.StrShowList;
             this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -184,7 +190,7 @@
             this.groupBox3.Size = new System.Drawing.Size(200, 107);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Gestion client";
+            this.groupBox3.Text = RessourcesString.StrClientMgt;
             // 
             // button6
             // 
@@ -192,7 +198,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(187, 23);
             this.button6.TabIndex = 2;
-            this.button6.Text = "Supprimer les clients";
+            this.button6.Text = RessourcesString.StrDeleteClients;
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -201,7 +207,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(187, 23);
             this.button5.TabIndex = 1;
-            this.button5.Text = "Voir les clients";
+            this.button5.Text = RessourcesString.StrSeeClients;
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -210,7 +216,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(187, 23);
             this.button4.TabIndex = 0;
-            this.button4.Text = "Ajouter les clients";
+            this.button4.Text = ResourceString.strAddClients;
             this.button4.UseVisualStyleBackColor = true;
             // 
             // groupBox4
@@ -223,7 +229,7 @@
             this.groupBox4.Size = new System.Drawing.Size(200, 107);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Fenêtres";
+            this.groupBox4.Text = ResourceString.strWindows;
             // 
             // button8
             // 
@@ -231,7 +237,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(187, 23);
             this.button8.TabIndex = 2;
-            this.button8.Text = "Fermer toutes les fenêtres";
+            this.button8.Text = ResourceString.strCloseWindows;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
@@ -240,7 +246,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(187, 23);
             this.button7.TabIndex = 1;
-            this.button7.Text = "Réouvrir le client";
+            this.button7.Text = ResourceString.strReopenClient;
             this.button7.UseVisualStyleBackColor = true;
             // 
             // comboBox1
