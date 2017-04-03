@@ -1,5 +1,6 @@
 ﻿using ABIMS.Model;
 using System.Resources;
+using System.Windows.Forms;
 
 namespace ABIMS
 {
@@ -213,7 +214,7 @@ namespace ABIMS
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(187, 23);
             this.button4.TabIndex = 0;
-            this.button4.Text = global::ABIMS.ResourceString.strAddClients;
+            this.button4.Text = global::ABIMS.ResourceString.strAddClient;
             this.button4.UseVisualStyleBackColor = true;
             // 
             // groupBox4
@@ -259,10 +260,12 @@ namespace ABIMS
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(220, 28);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(797, 527);
             this.dataGridView1.TabIndex = 5;
-            System.Windows.Forms.BindingSource source = new System.Windows.Forms.BindingSource(Clients.clients.ListClients, null);
-            this.dataGridView1.DataSource = source;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
             // ListClient
             // 
@@ -292,26 +295,26 @@ namespace ABIMS
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        protected System.Windows.Forms.MenuStrip menuStrip1;
+        protected System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        protected System.Windows.Forms.GroupBox groupBox1;
+        protected System.Windows.Forms.GroupBox groupBox2;
+        protected System.Windows.Forms.GroupBox groupBox3;
+        protected System.Windows.Forms.GroupBox groupBox4;
+        protected System.Windows.Forms.Button button1;
+        protected System.Windows.Forms.TextBox textBox1;
+        protected System.Windows.Forms.CheckBox checkBox4;
+        protected System.Windows.Forms.CheckBox checkBox3;
+        protected System.Windows.Forms.CheckBox checkBox2;
+        protected System.Windows.Forms.CheckBox checkBox1;
+        protected System.Windows.Forms.Button button3;
+        protected System.Windows.Forms.Button button2;
+        protected System.Windows.Forms.Button button6;
+        protected System.Windows.Forms.Button button5;
+        protected System.Windows.Forms.Button button4;
+        protected System.Windows.Forms.Button button8;
+        protected System.Windows.Forms.Button button7;
+        protected System.Windows.Forms.ComboBox comboBox1;
+        protected System.Windows.Forms.DataGridView dataGridView1;
     }
 }

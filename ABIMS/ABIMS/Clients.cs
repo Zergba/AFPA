@@ -44,7 +44,7 @@ namespace ABIMS.Model
         public Clients()
         {
             this.ListClients = new BindingList<Client>();
-            //this.test();
+            this.test();
         }
 
         public void AddClient(Client client)

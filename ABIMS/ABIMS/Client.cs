@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ABIMS.Model
 {
+    [Serializable]
     public class Client
     {
 

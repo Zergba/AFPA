@@ -50,6 +50,12 @@
     <Compile Include="Clients.cs" />
     <Compile Include="Comment.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="DetailClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailClient.Designer.cs">
+      <DependentUpon>DetailClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
       <DependentUpon>ResourceString.resx</DependentUpon>
     </Compile>
     <Compile Include="RessourcesString.cs" />
+    <EmbeddedResource Include="DetailClient.resx">
+      <DependentUpon>DetailClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
