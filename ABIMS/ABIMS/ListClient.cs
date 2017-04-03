@@ -13,10 +13,8 @@ namespace ABIMS
 {
     public partial class ListClient : Form
     {
-        public ListClient()
-        {
-          
-           
+        public ListClient(Form parent)
+        {         
             InitializeComponent();
         }
     }

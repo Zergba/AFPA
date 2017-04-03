@@ -1,29 +1,60 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ABIMS.Model
 {
-    class Clients
+    public sealed class Clients
     {
-        List<Client> listClients;
+
+
+        private static Clients _clients = null;
+
+
+        private BindingList<Client> listClients;
+
+        public static Clients clients
+        {
+            get
+            {
+                if (_clients == null)
+                {
+                    _clients = new Clients();
+                }
+                return _clients;
+            }
+        }
+
+        public BindingList<Client> ListClients
+        {
+            get
+            {
+                return listClients;
+            }
+
+            set
+            {
+                listClients = value;
+            }
+        }
 
         public Clients()
         {
-            this.listClients = new List<Client>();
+            this.ListClients = new BindingList<Client>();
         }
 
         public void AddClient(Client client)
         {          
-            listClients.Add(client);              
+            ListClients.Add(client);              
         }
 
         public void RemoveClient(Client client)
         {
-            listClients.Remove(client);
+            ListClients.Remove(client);
         }
 
         public void UpdateClient(Client client, Int32 Id, String Name, String Type, String ActivityDomain, String Adresse, String PhoneNumber, Int32 SalesRevenu, Int32 Staff)
@@ -39,7 +70,7 @@ namespace ABIMS.Model
         }
         public Client findClientByID(Int32 id)
         {
-            foreach(Client client in this.listClients)
+            foreach(Client client in this.ListClients)
             {
                 if (client.Id == id) return client;
             }
@@ -49,7 +80,7 @@ namespace ABIMS.Model
         public List<Client>findClientByName(String Name)
         {
             List<Client> result = new List<Client>();
-            foreach (Client client in this.listClients)
+            foreach (Client client in this.ListClients)
             {
                 if (client.Name == Name) result.Add(client);
             }

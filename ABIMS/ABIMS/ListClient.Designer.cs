@@ -260,6 +260,7 @@ namespace ABIMS
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(797, 527);
             this.dataGridView1.TabIndex = 5;
+            
             // 
             // ListClient
             // 

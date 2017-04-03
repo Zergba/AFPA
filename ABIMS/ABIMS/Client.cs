@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ABIMS.Model
 {
-    class Client
+    public class Client
     {
 
         public const String TYPE_PUBLIC = "publique";
