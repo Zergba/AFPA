@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.btnValidModif = new System.Windows.Forms.Button();
+            this.btnCancelModif = new System.Windows.Forms.Button();
+            this.btnDeleteClient = new System.Windows.Forms.Button();
+            this.cbKeepOpen = new System.Windows.Forms.CheckBox();
+            this.cbModifications = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -42,39 +42,36 @@
             // 
             this.groupBox1.Location = new System.Drawing.Point(15, 35);
             // 
-            // textBox4
+            // tbStaff
             // 
             this.tbStaff.Enabled = false;
             // 
-            // textBox3
+            // tbCA
             // 
             this.tbCA.Enabled = false;
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Enabled = false;
             // 
-            // textBox2
+            // tbTel
             // 
             this.tbTel.Enabled = false;
             // 
-            // textBox1
+            // tbAdress
             // 
             this.tbAdress.Enabled = false;
             // 
-            // maskedTextBox3
+            // tbDA
             // 
             this.tbDA.Enabled = false;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Enabled = false;
-            // 
-            // maskedTextBox2
+            // tbName
             // 
             this.tbName.Enabled = false;
             // 
-            // maskedTextBox1
+            // tbId
             // 
             this.tbId.Enabled = false;
             // 
@@ -88,14 +85,13 @@
             this.tabControl1.Location = new System.Drawing.Point(15, 323);
             this.tabControl1.Size = new System.Drawing.Size(517, 289);
             // 
-            // Contacts
+            // tabPage1
             // 
             this.tabPage1.Size = new System.Drawing.Size(509, 263);
             // 
             // tabPage2
             // 
             this.tabPage2.Size = new System.Drawing.Size(509, 263);
-            this.tabPage2.Text = "Commentaires";
             // 
             // button4
             // 
@@ -116,70 +112,80 @@
             // 
             this.button1.Size = new System.Drawing.Size(102, 23);
             // 
-            // button5
+            // comboBox1
             // 
-            this.button5.Location = new System.Drawing.Point(13, 631);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 23);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Valider modifications";
-            this.button5.UseVisualStyleBackColor = true;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Enabled = false;
             // 
-            // button6
+            // btnValidModif
             // 
-            this.button6.Location = new System.Drawing.Point(133, 631);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 23);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Annuler modifications";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnValidModif.Enabled = false;
+            this.btnValidModif.Location = new System.Drawing.Point(13, 631);
+            this.btnValidModif.Name = "btnValidModif";
+            this.btnValidModif.Size = new System.Drawing.Size(114, 23);
+            this.btnValidModif.TabIndex = 2;
+            this.btnValidModif.Text = "Valider modifications";
+            this.btnValidModif.UseVisualStyleBackColor = true;
+            this.btnValidModif.Click += new System.EventHandler(this.btnValidModif_Click);
             // 
-            // button7
+            // btnCancelModif
             // 
-            this.button7.Location = new System.Drawing.Point(372, 631);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(156, 23);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Supprimer le client";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnCancelModif.Enabled = false;
+            this.btnCancelModif.Location = new System.Drawing.Point(133, 631);
+            this.btnCancelModif.Name = "btnCancelModif";
+            this.btnCancelModif.Size = new System.Drawing.Size(123, 23);
+            this.btnCancelModif.TabIndex = 3;
+            this.btnCancelModif.Text = "Annuler modifications";
+            this.btnCancelModif.UseVisualStyleBackColor = true;
+            this.btnCancelModif.Click += new System.EventHandler(this.btnCancelModif_Click);
             // 
-            // checkBox1
+            // btnDeleteClient
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(432, 12);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.btnDeleteClient.Location = new System.Drawing.Point(372, 631);
+            this.btnDeleteClient.Name = "btnDeleteClient";
+            this.btnDeleteClient.Size = new System.Drawing.Size(156, 23);
+            this.btnDeleteClient.TabIndex = 4;
+            this.btnDeleteClient.Text = "Supprimer le client";
+            this.btnDeleteClient.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbKeepOpen
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(346, 12);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbKeepOpen.AutoSize = true;
+            this.cbKeepOpen.Location = new System.Drawing.Point(432, 12);
+            this.cbKeepOpen.Name = "cbKeepOpen";
+            this.cbKeepOpen.Size = new System.Drawing.Size(93, 17);
+            this.cbKeepOpen.TabIndex = 5;
+            this.cbKeepOpen.Text = "Garder Ouvert";
+            this.cbKeepOpen.UseVisualStyleBackColor = true;
+            // 
+            // cbModifications
+            // 
+            this.cbModifications.AutoSize = true;
+            this.cbModifications.Location = new System.Drawing.Point(338, 12);
+            this.cbModifications.Name = "cbModifications";
+            this.cbModifications.Size = new System.Drawing.Size(88, 17);
+            this.cbModifications.TabIndex = 6;
+            this.cbModifications.Text = "Modifications";
+            this.cbModifications.UseVisualStyleBackColor = true;
+            this.cbModifications.CheckedChanged += new System.EventHandler(this.cbModifications_CheckedChanged);
             // 
             // DetailClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(538, 666);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.cbModifications);
+            this.Controls.Add(this.cbKeepOpen);
+            this.Controls.Add(this.btnDeleteClient);
+            this.Controls.Add(this.btnCancelModif);
+            this.Controls.Add(this.btnValidModif);
             this.Name = "DetailClient";
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.tabControl1, 0);
-            this.Controls.SetChildIndex(this.button5, 0);
-            this.Controls.SetChildIndex(this.button6, 0);
-            this.Controls.SetChildIndex(this.button7, 0);
-            this.Controls.SetChildIndex(this.checkBox1, 0);
-            this.Controls.SetChildIndex(this.checkBox2, 0);
+            this.Controls.SetChildIndex(this.btnValidModif, 0);
+            this.Controls.SetChildIndex(this.btnCancelModif, 0);
+            this.Controls.SetChildIndex(this.btnDeleteClient, 0);
+            this.Controls.SetChildIndex(this.cbKeepOpen, 0);
+            this.Controls.SetChildIndex(this.cbModifications, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -191,10 +197,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button btnValidModif;
+        private System.Windows.Forms.Button btnCancelModif;
+        private System.Windows.Forms.Button btnDeleteClient;
+        private System.Windows.Forms.CheckBox cbKeepOpen;
+        private System.Windows.Forms.CheckBox cbModifications;
     }
 }

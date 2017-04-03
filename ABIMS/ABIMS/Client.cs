@@ -24,6 +24,7 @@ namespace ABIMS.Model
         private String adresse;
         private String phoneNumber;
         private Int32 salesRevenu;
+        private String nature;
         private Int32 staff;
         private List<Contact> contactList;
         private List<Comment> commentList;
@@ -155,6 +156,19 @@ namespace ABIMS.Model
             set
             {
                 commentList = value;
+            }
+        }
+
+        public string Nature
+        {
+            get
+            {
+                return nature;
+            }
+
+            set
+            {
+                nature = value;
             }
         }
 

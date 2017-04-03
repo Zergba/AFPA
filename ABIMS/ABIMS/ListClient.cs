@@ -35,8 +35,7 @@ namespace ABIMS
             Client client = (Client)dataGridView1.CurrentRow.DataBoundItem;
             DetailClient dc = new DetailClient(client);
             windows_list.Add(dc);
-            dc.Show();
-            
+            dc.Show();    
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

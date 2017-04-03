@@ -93,6 +93,7 @@ namespace ABIMS.Model
             this.ListClients.Add(new Model.Client(2, "aa", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
             this.ListClients.Add(new Model.Client(3, "b", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
             this.ListClients.Add(new Model.Client(4, "bc", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(5, "bcb", Client.TYPE_PRIVATE, "", "", "0123456789", 1, 1));
         }
 
 
