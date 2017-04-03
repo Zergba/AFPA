@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace ABIMS.Model
 {
-    public sealed class Clients
+    public class Clients
     {
-
 
         private static Clients _clients = null;
 
@@ -45,6 +44,7 @@ namespace ABIMS.Model
         public Clients()
         {
             this.ListClients = new BindingList<Client>();
+            //this.test();
         }
 
         public void AddClient(Client client)
@@ -85,6 +85,14 @@ namespace ABIMS.Model
                 if (client.Name == Name) result.Add(client);
             }
             return result;
+        }
+
+        public void test()
+        {
+            this.ListClients.Add(new Model.Client(1, "a", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(2, "aa", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(3, "b", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(4, "bc", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
         }
 
 

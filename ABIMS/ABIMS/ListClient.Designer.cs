@@ -1,4 +1,5 @@
-﻿using System.Resources;
+﻿using ABIMS.Model;
+using System.Resources;
 
 namespace ABIMS
 {
@@ -260,7 +261,8 @@ namespace ABIMS
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(797, 527);
             this.dataGridView1.TabIndex = 5;
-            
+            System.Windows.Forms.BindingSource source = new System.Windows.Forms.BindingSource(Clients.clients.ListClients, null);
+            this.dataGridView1.DataSource = source;
             // 
             // ListClient
             // 
