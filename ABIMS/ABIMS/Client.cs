@@ -24,6 +24,8 @@ namespace ABIMS.Model
         private String phoneNumber;
         private Int32 salesRevenu;
         private Int32 staff;
+        private List<Contact> contactList;
+        private List<Comment> commentList;
 
         public int Id
         {
@@ -126,6 +128,32 @@ namespace ABIMS.Model
             set
             {
                 staff = value;
+            }
+        }
+
+        internal List<Contact> ContactList
+        {
+            get
+            {
+                return contactList;
+            }
+
+            set
+            {
+                contactList = value;
+            }
+        }
+
+        internal List<Comment> CommentList
+        {
+            get
+            {
+                return commentList;
+            }
+
+            set
+            {
+                commentList = value;
             }
         }
 
