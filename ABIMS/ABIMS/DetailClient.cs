@@ -12,9 +12,11 @@ namespace ABIMS
     public partial class DetailClient : ABIMS.ParentClient
     {
         private Client client;
-        public DetailClient(Client client)
+        private DataGridView dgv;
+        public DetailClient(Client client, DataGridView dgv)
         {
             this.Client = client;
+            this.dgv = dgv;
             InitializeComponent();
             loadClient();
         }
@@ -71,31 +73,63 @@ namespace ABIMS
 
         private void btnValidModif_Click(object sender, EventArgs e)
         {
-            this.Client.Id = Int32.Parse(tbId.Text);
-            this.Client.Name = tbName.Text;
-            this.Client.Adresse = tbAdress.Text;
-            this.Client.ActivityDomain = tbDA.Text;
-            this.Client.PhoneNumber = tbTel.Text;
-            this.Client.Staff = Int32.Parse(tbStaff.Text);
-            this.Client.SalesRevenu = Int32.Parse(tbCA.Text);
-            String typeString = comboBox1.Text;
-            if(typeString == "Public")
+
+            if (MessageBox.Show("valider les modifications ?", "Valider modification", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                this.Client.Type = Client.TYPE_PUBLIC;
-            }else if(typeString == "Privé"){
-                this.Client.Type = Client.TYPE_PRIVATE;
+                try
+                {
+                    this.Client.Id = Int32.Parse(tbId.Text);
+                    this.Client.Name = tbName.Text;
+                    this.Client.Adresse = tbAdress.Text;
+                    this.Client.ActivityDomain = tbDA.Text;
+                    this.Client.PhoneNumber = tbTel.Text;
+                    this.Client.Staff = Int32.Parse(tbStaff.Text);
+                    this.Client.SalesRevenu = Int32.Parse(tbCA.Text);
+                    String typeString = comboBox1.Text;
+                    if (typeString == "Public")
+                    {
+                        this.Client.Type = Client.TYPE_PUBLIC;
+                    }
+                    else if (typeString == "Privé")
+                    {
+                        this.Client.Type = Client.TYPE_PRIVATE;
+                    }
+                    String natureString = comboBox2.Text;
+                    if (natureString == "Principale")
+                    {
+                        this.Client.Nature = Client.NATURE_MAIN;
+                    }
+                    else if (natureString == "Secondaire")
+                    {
+                        this.Client.Nature = Client.NATURE_SECONDARY;
+                    }
+                    else if (natureString == "Ancienne")
+                    {
+                        this.Client.Nature = Client.NATURE_OLD;
+                    }
+                    MessageBox.Show("Le client a bien été modifié", "valider modification OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.dgv.Refresh();
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Attention saisie incorrecte", "valider modification KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            String natureString = comboBox2.Text;
-            if (natureString == "Principale")
+        }
+
+        private void btnDeleteClient_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Êtes vous sûr de vouloir supprimer ce client ?", "Supprimer Client", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                this.Client.Nature = Client.NATURE_MAIN;
-            }else if (natureString == "Secondaire")
-            {
-                this.Client.Nature = Client.NATURE_SECONDARY;
-            }
-            else if (natureString == "Ancienne")
-            {
-                this.Client.Nature = Client.NATURE_OLD;
+                try
+                {
+                    Clients.clients.ListClients.Remove(this.Client);
+                    MessageBox.Show("Le client a bien été supprimé", "Supprimer Client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.dgv.Refresh();
+                    this.Close();
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Impossible de supprimer le client", "Supprimer Client KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

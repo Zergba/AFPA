@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjoutClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutClient.Designer.cs">
+      <DependentUpon>AjoutClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs" />
     <Compile Include="Clients.cs" />
     <Compile Include="Comment.cs" />

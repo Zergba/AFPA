@@ -147,6 +147,7 @@
             this.btnDeleteClient.TabIndex = 4;
             this.btnDeleteClient.Text = "Supprimer le client";
             this.btnDeleteClient.UseVisualStyleBackColor = true;
+            this.btnDeleteClient.Click += new System.EventHandler(this.btnDeleteClient_Click);
             // 
             // cbKeepOpen
             // 
@@ -179,6 +180,7 @@
             this.Controls.Add(this.btnCancelModif);
             this.Controls.Add(this.btnValidModif);
             this.Name = "DetailClient";
+            this.Text = "ABIMS - Détail Client";
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.btnValidModif, 0);

@@ -33,7 +33,7 @@ namespace ABIMS
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Client client = (Client)dataGridView1.CurrentRow.DataBoundItem;
-            DetailClient dc = new DetailClient(client);
+            DetailClient dc = new DetailClient(client, this.dataGridView1);
             windows_list.Add(dc);
             dc.Show();    
         }
