@@ -11,14 +11,12 @@ namespace ABIMS
 {
     public partial class AjoutClient : ABIMS.ParentClient
     {
+        private ListClient parent;
+      
 
-        private DataGridView dgv;
-        private List<DetailClient> window_list;
-
-        public AjoutClient(DataGridView dgv, List<DetailClient> window_list)
+        public AjoutClient(ListClient parent)
         {
-            this.dgv = dgv;
-            this.window_list = window_list;
+            this.parent = parent;
             InitializeComponent();
         }
 
@@ -71,11 +69,12 @@ namespace ABIMS
                 Client client = new Client(Id, Name, TypeClient, ActivityDomain, Adresse, PhoneNumber, SalesRevenu, Staff);
                 Clients.clients.ListClients.Add(client);
                 MessageBox.Show("Le client a bien été créé", "Creation client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgv.Refresh();
+                this.parent.Datagridview.Refresh();
                 if (this.checkBox1.Checked)
                 {
-                    DetailClient dc = new DetailClient(client, dgv, window_list);
-                    window_list.Add(dc);
+                    DetailClient dc = new DetailClient(client, parent);
+                    parent.WindowsList.Add(dc);
+                    parent.updateLastClientList(client);
                     dc.Show();
                     
                 }

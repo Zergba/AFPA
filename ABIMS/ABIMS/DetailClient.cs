@@ -14,8 +14,8 @@ namespace ABIMS
 
 
         private Client client;
-        private DataGridView dgv;
-        private List<DetailClient> window_list;
+      
+        private ListClient parent;
 
         public CheckBox CbKeepOpen
         {
@@ -26,11 +26,11 @@ namespace ABIMS
         }
 
 
-        public DetailClient(Client client, DataGridView dgv, List<DetailClient> window_list)
+        public DetailClient(Client client, ListClient parent)
         {
-            this.window_list = window_list;
+            this.parent = parent;
             this.Client = client;
-            this.dgv = dgv;
+       
             InitializeComponent();
             loadClient();
         }
@@ -122,7 +122,7 @@ namespace ABIMS
                         this.Client.Nature = Client.NATURE_OLD;
                     }
                     MessageBox.Show("Le client a bien été modifié", "valider modification OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.dgv.Refresh();
+                    this.parent.Datagridview.Refresh();
                 }catch(Exception ex)
                 {
                     MessageBox.Show("Attention saisie incorrecte", "valider modification KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -138,7 +138,7 @@ namespace ABIMS
                 {
                     Clients.clients.RemoveClient(this.Client);
                     MessageBox.Show("Le client a bien été supprimé", "Supprimer Client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.dgv.Refresh();
+                    this.parent.Datagridview.Refresh();
                     this.Close();
                 }catch(Exception ex)
                 {
@@ -149,7 +149,7 @@ namespace ABIMS
 
         private void DetailClient_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.window_list.Remove(this);
+            this.parent.WindowsList.Remove(this);
         }
     }
 }

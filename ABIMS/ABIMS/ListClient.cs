@@ -15,26 +15,79 @@ namespace ABIMS
     public partial class ListClient : Form
     {
 
-        static List<DetailClient>windows_list = new List<DetailClient>();
+        private List<DetailClient> windowsList; 
+
+        private List<Client> lastClientList;
 
         private BindingSource source;
 
+        public List<DetailClient> WindowsList
+        {
+            get
+            {
+                return windowsList;
+            }
+
+            set
+            {
+                windowsList = value;
+            }
+        }
+
+        public List<Client> LastClientList
+        {
+            get
+            {
+                return lastClientList;
+            }
+
+            set
+            {
+                lastClientList = value;
+            }
+        }
+
+        public DataGridView Datagridview
+        {
+            get
+            {
+                return this.dataGridView1;
+            }
+        }
+
         public ListClient(Form parent)
         {         
+            this.WindowsList = new List<DetailClient>();
+            this.LastClientList = new List<Client>();
             InitializeComponent();
             initGrid();
+           
         }
+
+
         private void initGrid()
         {
             this.source = new BindingSource(Clients.clients.ListClients, null);
             this.dataGridView1.DataSource = source;
         }
 
+        public void updateLastClientList(Client client)
+        {
+            if (this.cbbLastsSeen.Items.Count >= 10)
+            {
+                this.cbbLastsSeen.Items.RemoveAt(0);
+            }
+            if(!this.cbbLastsSeen.Items.Contains(client))this.cbbLastsSeen.Items.Add(client);
+
+
+        }
+       
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Client client = (Client)dataGridView1.CurrentRow.DataBoundItem;
-            DetailClient dc = new DetailClient(client, this.dataGridView1, windows_list);
-            windows_list.Add(dc);
+            DetailClient dc = new DetailClient(client,this);
+            updateLastClientList(client);
+            WindowsList.Add(dc);
             dc.Show();    
         }
 
@@ -45,7 +98,7 @@ namespace ABIMS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AjoutClient ac = new AjoutClient(this.dataGridView1, windows_list);
+            AjoutClient ac = new AjoutClient(this);
             ac.ShowDialog();
         }
 
@@ -55,8 +108,9 @@ namespace ABIMS
             foreach(DataGridViewRow row in SelectedRows)
             {
                 Client client = (Client)row.DataBoundItem;
-                DetailClient dc = new DetailClient(client, this.dataGridView1, windows_list);
-                windows_list.Add(dc);
+                DetailClient dc = new DetailClient(client,this);
+                updateLastClientList(client);
+                WindowsList.Add(dc);
                 dc.Show();
             }
         }
@@ -64,7 +118,7 @@ namespace ABIMS
         private void button8_Click(object sender, EventArgs e)
         {
             List<DetailClient> temp = new List<DetailClient>();
-            foreach(DetailClient dc in windows_list)
+            foreach(DetailClient dc in WindowsList)
             {
                 if (!dc.CbKeepOpen.Checked)
                 {
@@ -74,7 +128,7 @@ namespace ABIMS
             foreach(DetailClient dc in temp)
             {
                 dc.Close();
-                windows_list.Remove(dc);
+                WindowsList.Remove(dc);
             }
         }
 
@@ -97,6 +151,13 @@ namespace ABIMS
                     MessageBox.Show("Impossible de supprimer tous les client", "Supprimer Client KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Client client = (Client)cbbLastsSeen.SelectedItem;
+            DetailClient dc = new DetailClient(client, this);
+            dc.Show();
         }
     }
 }

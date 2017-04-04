@@ -51,7 +51,7 @@ namespace ABIMS
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbLastsSeen = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -224,7 +224,7 @@ namespace ABIMS
             // 
             this.groupBox4.Controls.Add(this.button8);
             this.groupBox4.Controls.Add(this.button7);
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.cbbLastsSeen);
             this.groupBox4.Location = new System.Drawing.Point(13, 356);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(200, 107);
@@ -250,14 +250,16 @@ namespace ABIMS
             this.button7.TabIndex = 1;
             this.button7.Text = global::ABIMS.ResourceString.strReopenClient;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // comboBox1
+            // cbbLastsSeen
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbbLastsSeen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLastsSeen.FormattingEnabled = true;
+            this.cbbLastsSeen.Location = new System.Drawing.Point(7, 20);
+            this.cbbLastsSeen.Name = "cbbLastsSeen";
+            this.cbbLastsSeen.Size = new System.Drawing.Size(187, 21);
+            this.cbbLastsSeen.TabIndex = 0;
             // 
             // dataGridView1
             // 
@@ -318,7 +320,7 @@ namespace ABIMS
         protected System.Windows.Forms.Button button4;
         protected System.Windows.Forms.Button button8;
         protected System.Windows.Forms.Button button7;
-        protected System.Windows.Forms.ComboBox comboBox1;
+        protected System.Windows.Forms.ComboBox cbbLastsSeen;
         protected System.Windows.Forms.DataGridView dataGridView1;
     }
 }

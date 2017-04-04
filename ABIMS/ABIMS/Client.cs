@@ -183,5 +183,10 @@ namespace ABIMS.Model
             SalesRevenu = salesRevenu;
             Staff = staff;
         }
+
+        public override string ToString()
+        {
+            return this.Id+" - "+this.Name;
+        }
     }
 }
