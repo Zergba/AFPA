@@ -136,7 +136,7 @@ namespace ABIMS
             {
                 try
                 {
-                    Clients.clients.ListClients.Remove(this.Client);
+                    Clients.clients.RemoveClient(this.Client);
                     MessageBox.Show("Le client a bien été supprimé", "Supprimer Client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.dgv.Refresh();
                     this.Close();

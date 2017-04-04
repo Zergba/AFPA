@@ -14,7 +14,7 @@ namespace ABIMS.Model
         public const String TYPE_PRIVATE = "privée";
         public const String NATURE_MAIN = "principale";
         public const String NATURE_SECONDARY = "secondaire";
-        public const String NATURE_OLD = "Ancienne"; 
+        public const String NATURE_OLD = "Ancienne";
 
 
         private Int32 id;

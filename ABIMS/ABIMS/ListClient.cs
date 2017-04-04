@@ -77,5 +77,26 @@ namespace ABIMS
                 windows_list.Remove(dc);
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection SelectedRows = dataGridView1.SelectedRows;
+            if (MessageBox.Show("Êtes vous sûr de vouloir supprimer ces clients ?", "Supprimer Clients", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                try
+                {
+                    foreach (DataGridViewRow row in SelectedRows)
+                    {
+                        Client client = (Client)row.DataBoundItem;
+                        Clients.clients.RemoveClient(client);
+                    }
+                    MessageBox.Show("Les client ont bien été supprimés", "Supprimer Clients OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.dataGridView1.Refresh();
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Impossible de supprimer tous les client", "Supprimer Client KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }
