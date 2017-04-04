@@ -13,10 +13,12 @@ namespace ABIMS
     {
 
         private DataGridView dgv;
+        private List<DetailClient> window_list;
 
-        public AjoutClient(DataGridView dgv)
+        public AjoutClient(DataGridView dgv, List<DetailClient> window_list)
         {
             this.dgv = dgv;
+            this.window_list = window_list;
             InitializeComponent();
         }
 
@@ -72,7 +74,8 @@ namespace ABIMS
                 dgv.Refresh();
                 if (this.checkBox1.Checked)
                 {
-                    DetailClient dc = new DetailClient(client, dgv);
+                    DetailClient dc = new DetailClient(client, dgv, window_list);
+                    window_list.Add(dc);
                     dc.Show();
                     
                 }

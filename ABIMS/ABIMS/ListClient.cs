@@ -33,7 +33,7 @@ namespace ABIMS
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Client client = (Client)dataGridView1.CurrentRow.DataBoundItem;
-            DetailClient dc = new DetailClient(client, this.dataGridView1);
+            DetailClient dc = new DetailClient(client, this.dataGridView1, windows_list);
             windows_list.Add(dc);
             dc.Show();    
         }
@@ -45,8 +45,37 @@ namespace ABIMS
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AjoutClient ac = new AjoutClient(this.dataGridView1);
+            AjoutClient ac = new AjoutClient(this.dataGridView1, windows_list);
             ac.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection SelectedRows = dataGridView1.SelectedRows;
+            foreach(DataGridViewRow row in SelectedRows)
+            {
+                Client client = (Client)row.DataBoundItem;
+                DetailClient dc = new DetailClient(client, this.dataGridView1, windows_list);
+                windows_list.Add(dc);
+                dc.Show();
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            List<DetailClient> temp = new List<DetailClient>();
+            foreach(DetailClient dc in windows_list)
+            {
+                if (!dc.CbKeepOpen.Checked)
+                {
+                    temp.Add(dc);
+                }
+            }
+            foreach(DetailClient dc in temp)
+            {
+                dc.Close();
+                windows_list.Remove(dc);
+            }
         }
     }
 }

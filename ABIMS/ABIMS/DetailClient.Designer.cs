@@ -181,6 +181,7 @@
             this.Controls.Add(this.btnValidModif);
             this.Name = "DetailClient";
             this.Text = "ABIMS - Détail Client";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DetailClient_FormClosing);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.btnValidModif, 0);

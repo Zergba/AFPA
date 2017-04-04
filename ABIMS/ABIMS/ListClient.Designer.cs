@@ -207,6 +207,7 @@ namespace ABIMS
             this.button5.TabIndex = 1;
             this.button5.Text = "Voir les clients";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -238,6 +239,7 @@ namespace ABIMS
             this.button8.TabIndex = 2;
             this.button8.Text = global::ABIMS.ResourceString.strCloseWindows;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 

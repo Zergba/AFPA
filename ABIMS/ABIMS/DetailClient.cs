@@ -11,10 +11,24 @@ namespace ABIMS
 {
     public partial class DetailClient : ABIMS.ParentClient
     {
+
+
         private Client client;
         private DataGridView dgv;
-        public DetailClient(Client client, DataGridView dgv)
+        private List<DetailClient> window_list;
+
+        public CheckBox CbKeepOpen
         {
+            get
+            {
+                return cbKeepOpen;
+            }
+        }
+
+
+        public DetailClient(Client client, DataGridView dgv, List<DetailClient> window_list)
+        {
+            this.window_list = window_list;
             this.Client = client;
             this.dgv = dgv;
             InitializeComponent();
@@ -131,6 +145,11 @@ namespace ABIMS
                     MessageBox.Show("Impossible de supprimer le client", "Supprimer Client KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void DetailClient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.window_list.Remove(this);
         }
     }
 }
