@@ -88,6 +88,9 @@
       <DependentUpon>ResourceString.resx</DependentUpon>
     </Compile>
     <Compile Include="RessourcesString.cs" />
+    <EmbeddedResource Include="AjoutClient.resx">
+      <DependentUpon>AjoutClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetailClient.resx">
       <DependentUpon>DetailClient.cs</DependentUpon>
     </EmbeddedResource>

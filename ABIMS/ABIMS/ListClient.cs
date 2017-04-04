@@ -42,5 +42,11 @@ namespace ABIMS
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AjoutClient ac = new AjoutClient(this.dataGridView1);
+            ac.ShowDialog();
+        }
     }
 }
