@@ -88,7 +88,6 @@ namespace ABIMS
         /// <param name="e"></param>
         private void cbModifications_CheckedChanged(object sender, EventArgs e)
         {            
-            this.tbId.Enabled = !this.tbId.Enabled;
             this.tbName.Enabled = !this.tbName.Enabled;
             this.tbAdress.Enabled = !this.tbAdress.Enabled;
             this.tbCA.Enabled = !this.tbCA.Enabled;

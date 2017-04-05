@@ -24,6 +24,7 @@ namespace ABIMS
         {
             this.parent = parent;
             InitializeComponent();
+            tbId.Text = Client.CountID.ToString();
         }
         /// <summary>
         /// annuler la création client et fermer la fenetre
@@ -43,7 +44,6 @@ namespace ABIMS
         {
            try
             {
-                Int32 Id = Int32.Parse(tbId.Text);
                 String Name = tbName.Text;
                 String Adresse = tbAdress.Text;
                 String ActivityDomain = tbDA.Text;

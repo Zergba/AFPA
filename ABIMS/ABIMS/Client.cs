@@ -16,7 +16,7 @@ namespace ABIMS.Model
         public const String NATURE_SECONDARY = "secondaire";
         public const String NATURE_OLD = "Ancienne";
 
-        private static Int32 countID = 0;
+        private static Int32 countID = 1;
         
         private Int32 id;
         private String name;
@@ -181,9 +181,22 @@ namespace ABIMS.Model
             }
         }
 
+        public static int CountID
+        {
+            get
+            {
+                return countID;
+            }
+
+            set
+            {
+                countID = value;
+            }
+        }
+
         public Client(String name, String type,String nature, String activityDomain, String adresse, String phoneNumber, Int32 salesRevenu, Int32 staff)
         {
-            this.Id = Client.countID++;
+            this.Id = Client.CountID++;
             this.Name = name;
             this.Type = type;
             this.ActivityDomain = activityDomain;
