@@ -73,13 +73,13 @@ namespace ABIMS
 
         public void updateLastClientList(Client client)
         {
-            if (this.cbbLastsSeen.Items.Count >= 10)
-            {
-                this.cbbLastsSeen.Items.RemoveAt(0);
-            }
+            if (this.cbbLastsSeen.Items.Count >= 10) this.cbbLastsSeen.Items.RemoveAt(0);
             if(!this.cbbLastsSeen.Items.Contains(client))this.cbbLastsSeen.Items.Add(client);
-
-
+        }
+        public void deleteLastClientList(Client client)
+        {
+            if(!Clients.clients.ListClients.Contains(client)&& this.cbbLastsSeen.Items.Contains(client))
+                this.cbbLastsSeen.Items.Remove(client);
         }
        
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -135,7 +135,7 @@ namespace ABIMS
         private void button6_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection SelectedRows = dataGridView1.SelectedRows;
-            if (MessageBox.Show("Êtes vous sûr de vouloir supprimer ces clients ?", "Supprimer Clients", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Êtes vous sûr de vouloir supprimer ce(s) client(s) ?", "Supprimer Clients", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 try
                 {
@@ -143,8 +143,9 @@ namespace ABIMS
                     {
                         Client client = (Client)row.DataBoundItem;
                         Clients.clients.RemoveClient(client);
+                        deleteLastClientList(client);
                     }
-                    MessageBox.Show("Les client ont bien été supprimés", "Supprimer Clients OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Le(s) client(s) a(ont) bien été supprimé(s)", "Supprimer Clients OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.dataGridView1.Refresh();
                 }catch(Exception ex)
                 {
