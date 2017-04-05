@@ -14,7 +14,7 @@ namespace ABIMS
 {
     public partial class ListClient : Form
     {
-
+        private Form1 parent;
         private List<DetailClient> windowsList; 
 
         private List<Client> lastClientList;
@@ -55,8 +55,9 @@ namespace ABIMS
             }
         }
 
-        public ListClient(Form parent)
-        {         
+        public ListClient(Form1 parent)
+        {
+            this.parent = parent; 
             this.WindowsList = new List<DetailClient>();
             this.LastClientList = new List<Client>();
             this.source = new BindingSource(Clients.clients.ListClients, null);
@@ -74,7 +75,21 @@ namespace ABIMS
             this.dataGridView1.DataSource = new BindingList<Client>();
             this.dataGridView1.Refresh();
         }
-
+        public void closeDeletedClient(Client client)
+        {
+            List<DetailClient> ldc = new List<DetailClient>();
+            foreach(ListClient lc in parent.ListWindowListClient)
+            {
+                foreach(DetailClient dc in lc.windowsList)
+                {
+                    if (dc.Client == client) ldc.Add(dc);
+                }
+            }
+            foreach (DetailClient dc in ldc)
+            {
+                dc.Close();
+            }
+        }
         public void updateLastClientList(Client client)
         {
             if (this.cbbLastsSeen.Items.Count >= 10) this.cbbLastsSeen.Items.RemoveAt(0);
@@ -140,7 +155,7 @@ namespace ABIMS
         private void button6_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection SelectedRows = dataGridView1.SelectedRows;
-            if (MessageBox.Show("Êtes vous sûr de vouloir supprimer ce(s) client(s) ?", "Supprimer Clients", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Êtes vous sûr de vouloir supprimer ce(s) client(s) ? (les fiches clients ouvertes seront fermées)", "Supprimer Clients", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 try
                 {
@@ -149,9 +164,11 @@ namespace ABIMS
                         Client client = (Client)row.DataBoundItem;
                         Clients.clients.RemoveClient(client);
                         deleteLastClientList(client);
+                        closeDeletedClient(client);
                     }
                     MessageBox.Show("Le(s) client(s) a(ont) bien été supprimé(s)", "Supprimer Clients OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.dataGridView1.Refresh();
+                    
                 }catch(Exception ex)
                 {
                     MessageBox.Show("Impossible de supprimer tous les client", "Supprimer Client KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -177,6 +194,19 @@ namespace ABIMS
         private void button3_Click(object sender, EventArgs e)
         {
             initGrid();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String strSearch = this.tbSearch.Text;
+            BindingList<Client> searchList = new BindingList<Client>();
+
+            if (cbIdClient.Checked)
+            {
+              //  searchList.Add
+            }
+
+
         }
     }
 }

@@ -140,7 +140,7 @@ namespace ABIMS
                     MessageBox.Show("Le client a bien été supprimé", "Supprimer Client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.parent.Datagridview.Refresh();
                     this.parent.deleteLastClientList(client);
-                    this.Close();
+                    parent.closeDeletedClient(this.Client);
                 }catch(Exception ex)
                 {
                     MessageBox.Show("Impossible de supprimer le client", "Supprimer Client KO", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -35,12 +35,12 @@ namespace ABIMS
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.cbNameProject = new System.Windows.Forms.CheckBox();
+            this.cbNameContact = new System.Windows.Forms.CheckBox();
+            this.cbNameClient = new System.Windows.Forms.CheckBox();
+            this.cbIdClient = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -67,7 +67,7 @@ namespace ABIMS
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1029, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1166, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,12 +79,12 @@ namespace ABIMS
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.tbSearch);
+            this.groupBox1.Controls.Add(this.cbNameProject);
+            this.groupBox1.Controls.Add(this.cbNameContact);
+            this.groupBox1.Controls.Add(this.cbNameClient);
+            this.groupBox1.Controls.Add(this.cbIdClient);
             this.groupBox1.Location = new System.Drawing.Point(13, 28);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 123);
@@ -92,62 +92,63 @@ namespace ABIMS
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rechercher";
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Location = new System.Drawing.Point(7, 95);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Rechercher";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch.Location = new System.Drawing.Point(7, 95);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(187, 23);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Rechercher";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // tbSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(7, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Saisir les termes de votre recherche";
+            this.tbSearch.Location = new System.Drawing.Point(7, 68);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(187, 20);
+            this.tbSearch.TabIndex = 4;
+            this.tbSearch.Text = "Saisir les termes de votre recherche";
             // 
-            // checkBox4
+            // cbNameProject
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(94, 44);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(53, 17);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Projet";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbNameProject.AutoSize = true;
+            this.cbNameProject.Location = new System.Drawing.Point(94, 44);
+            this.cbNameProject.Name = "cbNameProject";
+            this.cbNameProject.Size = new System.Drawing.Size(78, 17);
+            this.cbNameProject.TabIndex = 3;
+            this.cbNameProject.Text = "Nom Projet";
+            this.cbNameProject.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cbNameContact
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(7, 44);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(52, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Client";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbNameContact.AutoSize = true;
+            this.cbNameContact.Location = new System.Drawing.Point(7, 44);
+            this.cbNameContact.Name = "cbNameContact";
+            this.cbNameContact.Size = new System.Drawing.Size(88, 17);
+            this.cbNameContact.TabIndex = 2;
+            this.cbNameContact.Text = "Nom Contact";
+            this.cbNameContact.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbNameClient
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(94, 20);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(52, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Client";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbNameClient.AutoSize = true;
+            this.cbNameClient.Location = new System.Drawing.Point(94, 20);
+            this.cbNameClient.Name = "cbNameClient";
+            this.cbNameClient.Size = new System.Drawing.Size(77, 17);
+            this.cbNameClient.TabIndex = 1;
+            this.cbNameClient.Text = "Nom Client";
+            this.cbNameClient.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // cbIdClient
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(63, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Numéro";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbIdClient.AutoSize = true;
+            this.cbIdClient.Location = new System.Drawing.Point(7, 20);
+            this.cbIdClient.Name = "cbIdClient";
+            this.cbIdClient.Size = new System.Drawing.Size(92, 17);
+            this.cbIdClient.TabIndex = 0;
+            this.cbIdClient.Text = "Numéro Client";
+            this.cbIdClient.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -270,7 +271,7 @@ namespace ABIMS
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(797, 527);
+            this.dataGridView1.Size = new System.Drawing.Size(934, 527);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
@@ -279,7 +280,7 @@ namespace ABIMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1029, 557);
+            this.ClientSize = new System.Drawing.Size(1166, 557);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -309,12 +310,12 @@ namespace ABIMS
         protected System.Windows.Forms.GroupBox groupBox2;
         protected System.Windows.Forms.GroupBox groupBox3;
         protected System.Windows.Forms.GroupBox groupBox4;
-        protected System.Windows.Forms.Button button1;
-        protected System.Windows.Forms.TextBox textBox1;
-        protected System.Windows.Forms.CheckBox checkBox4;
-        protected System.Windows.Forms.CheckBox checkBox3;
-        protected System.Windows.Forms.CheckBox checkBox2;
-        protected System.Windows.Forms.CheckBox checkBox1;
+        protected System.Windows.Forms.Button btnSearch;
+        protected System.Windows.Forms.TextBox tbSearch;
+        protected System.Windows.Forms.CheckBox cbNameProject;
+        protected System.Windows.Forms.CheckBox cbNameContact;
+        protected System.Windows.Forms.CheckBox cbNameClient;
+        protected System.Windows.Forms.CheckBox cbIdClient;
         protected System.Windows.Forms.Button button3;
         protected System.Windows.Forms.Button button2;
         protected System.Windows.Forms.Button button6;

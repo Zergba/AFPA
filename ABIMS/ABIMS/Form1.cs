@@ -12,14 +12,31 @@ namespace ABIMS
 {
     public partial class Form1 : Form
     {
+        private List<ListClient> listWindowListClient;
         public Form1()
         {
+            this.ListWindowListClient = new List<ListClient>();
             InitializeComponent();
+        }
+
+        public List<ListClient> ListWindowListClient
+        {
+            get
+            {
+                return listWindowListClient;
+            }
+
+            set
+            {
+                listWindowListClient = value;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form lc = new ListClient(this);
+
+            ListClient lc = new ListClient(this);
+            this.ListWindowListClient.Add(lc);
             lc.Show();
         }
     }
