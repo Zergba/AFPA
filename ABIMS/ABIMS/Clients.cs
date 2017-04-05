@@ -123,11 +123,13 @@ namespace ABIMS.Model
         /// </summary>
         public void test()
         {
-            this.ListClients.Add(new Model.Client(1, "a", Client.TYPE_PUBLIC,Client.NATURE_MAIN, "", "", "0123456789", 1, 1));
-            this.ListClients.Add(new Model.Client(2, "aa", Client.TYPE_PUBLIC, Client.NATURE_OLD, "", "", "0123456789", 1, 1));
-            this.ListClients.Add(new Model.Client(3, "b", Client.TYPE_PUBLIC, Client.NATURE_SECONDARY, "", "", "0123456789", 1, 1));
-            this.ListClients.Add(new Model.Client(4, "bc", Client.TYPE_PUBLIC, Client.NATURE_MAIN, "", "", "0123456789", 1, 1));
-            this.ListClients.Add(new Model.Client(5, "bcb", Client.TYPE_PRIVATE, Client.NATURE_MAIN, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(1, "a", Client.TYPE_PUBLIC,Client.NATURE_MAIN, "maïs", "2 rue de la republique", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(2, "aa", Client.TYPE_PUBLIC, Client.NATURE_OLD, "blé", "blablabla", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(3, "b", Client.TYPE_PUBLIC, Client.NATURE_SECONDARY, "fromage", "adresse lambda", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(4, "bc", Client.TYPE_PUBLIC, Client.NATURE_MAIN, "lait", "trop loin", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(5, "bcb", Client.TYPE_PRIVATE, Client.NATURE_MAIN, "porc", "assez proche", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(6, "a", Client.TYPE_PRIVATE, Client.NATURE_MAIN, "poulet", "derriere toi", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(7, "3", Client.TYPE_PRIVATE, Client.NATURE_MAIN, "poulet", "derriere toi", "0123456789", 1, 1));
         }
     }
 }
