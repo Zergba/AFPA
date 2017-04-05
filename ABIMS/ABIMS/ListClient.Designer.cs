@@ -37,7 +37,7 @@ namespace ABIMS
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
-            this.cbNameProject = new System.Windows.Forms.CheckBox();
+            this.cbIdContact = new System.Windows.Forms.CheckBox();
             this.cbNameContact = new System.Windows.Forms.CheckBox();
             this.cbNameClient = new System.Windows.Forms.CheckBox();
             this.cbIdClient = new System.Windows.Forms.CheckBox();
@@ -81,7 +81,7 @@ namespace ABIMS
             // 
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.tbSearch);
-            this.groupBox1.Controls.Add(this.cbNameProject);
+            this.groupBox1.Controls.Add(this.cbIdContact);
             this.groupBox1.Controls.Add(this.cbNameContact);
             this.groupBox1.Controls.Add(this.cbNameClient);
             this.groupBox1.Controls.Add(this.cbIdClient);
@@ -111,20 +111,20 @@ namespace ABIMS
             this.tbSearch.Text = "Saisir les termes de votre recherche";
             this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
             // 
-            // cbNameProject
+            // cbIdContact
             // 
-            this.cbNameProject.AutoSize = true;
-            this.cbNameProject.Location = new System.Drawing.Point(94, 44);
-            this.cbNameProject.Name = "cbNameProject";
-            this.cbNameProject.Size = new System.Drawing.Size(78, 17);
-            this.cbNameProject.TabIndex = 3;
-            this.cbNameProject.Text = "Nom Projet";
-            this.cbNameProject.UseVisualStyleBackColor = true;
+            this.cbIdContact.AutoSize = true;
+            this.cbIdContact.Location = new System.Drawing.Point(7, 43);
+            this.cbIdContact.Name = "cbIdContact";
+            this.cbIdContact.Size = new System.Drawing.Size(75, 17);
+            this.cbIdContact.TabIndex = 3;
+            this.cbIdContact.Text = "Id Contact";
+            this.cbIdContact.UseVisualStyleBackColor = true;
             // 
             // cbNameContact
             // 
             this.cbNameContact.AutoSize = true;
-            this.cbNameContact.Location = new System.Drawing.Point(7, 44);
+            this.cbNameContact.Location = new System.Drawing.Point(94, 43);
             this.cbNameContact.Name = "cbNameContact";
             this.cbNameContact.Size = new System.Drawing.Size(88, 17);
             this.cbNameContact.TabIndex = 2;
@@ -146,9 +146,9 @@ namespace ABIMS
             this.cbIdClient.AutoSize = true;
             this.cbIdClient.Location = new System.Drawing.Point(7, 20);
             this.cbIdClient.Name = "cbIdClient";
-            this.cbIdClient.Size = new System.Drawing.Size(92, 17);
+            this.cbIdClient.Size = new System.Drawing.Size(64, 17);
             this.cbIdClient.TabIndex = 0;
-            this.cbIdClient.Text = "Numéro Client";
+            this.cbIdClient.Text = "Id Client";
             this.cbIdClient.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -316,7 +316,7 @@ namespace ABIMS
         protected System.Windows.Forms.GroupBox groupBox4;
         protected System.Windows.Forms.Button btnSearch;
         protected System.Windows.Forms.TextBox tbSearch;
-        protected System.Windows.Forms.CheckBox cbNameProject;
+        protected System.Windows.Forms.CheckBox cbIdContact;
         protected System.Windows.Forms.CheckBox cbNameContact;
         protected System.Windows.Forms.CheckBox cbNameClient;
         protected System.Windows.Forms.CheckBox cbIdClient;

@@ -287,6 +287,25 @@ namespace ABIMS
                 }
 
             }
+            if (cbNameContact.Checked)
+            {
+                List<Client> lc = Clients.clients.findClientByContactName(strSearch);
+                foreach (Client client in lc)
+                {
+                    searchList.Add(client);
+                }
+            }
+            if (cbIdContact.Checked)
+            {
+                try
+                {
+                    searchList.Add(Clients.clients.findClientByContactId(Int32.Parse(strSearch)));
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show("recherche par ID impossible", "chercher client par ID KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
             this.Datagridview.DataSource = searchList;
             this.tbSearch.Text = "Saisir les termes de votre recherche";
         }

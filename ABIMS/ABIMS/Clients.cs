@@ -118,6 +118,30 @@ namespace ABIMS.Model
             }
             return result;
         }
+        public List<Client> findClientByContactName(String Name)
+        {
+            List<Client> result = new List<Client>();
+            foreach (Client client in this.ListClients)
+            {
+               foreach(Contact contact in client.ContactList)
+                {
+                    if(contact.Name==Name)result.Add(client);
+                }
+            }
+            return result;
+        }
+    
+        public Client findClientByContactId(Int32 Id)
+        {
+            foreach (Client client in this.ListClients)
+            {
+                foreach (Contact contact in client.ContactList)
+                {
+                    if (contact.Id == Id) return client;
+                }
+            }
+            return null;
+     }
         /// <summary>
         /// jeu d'essai
         /// </summary>

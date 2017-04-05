@@ -103,9 +103,22 @@ namespace ABIMS
             }
         }
 
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
         public Contact(Client client, string name, string function, string phone, string email, int totalTimeWorked)
         {
-            this.id = Contact.CountId++;
+            this.Id = Contact.CountId++;
             this.client = client;
             this.name = name;
             this.function = function;

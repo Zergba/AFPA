@@ -73,12 +73,25 @@ namespace ABIMS
             this.tbStaff.Text = this.Client.Staff.ToString();
             this.tbTel.Text = this.Client.PhoneNumber;
             this.tbDA.Text = this.Client.ActivityDomain;
+            
             if (this.Client.Type == Client.TYPE_PRIVATE)
             {
                 this.comboBox1.SelectedIndex = 0;
             }else if(this.Client.Type == Client.TYPE_PUBLIC)
             {
                 this.comboBox1.SelectedIndex = 1;
+            }
+            if (this.Client.Nature == Client.NATURE_MAIN)
+            {
+                this.comboBox2.SelectedIndex = 0;
+            }
+            else if (this.Client.Nature == Client.NATURE_SECONDARY)
+            {
+                this.comboBox2.SelectedIndex = 1;
+            }
+            else if (this.Client.Nature == Client.NATURE_OLD)
+            {
+                this.comboBox2.SelectedIndex = 2;
             }
             this.lbComment.DataSource = new BindingSource(this.Client.CommentList,null);
         }
@@ -115,6 +128,7 @@ namespace ABIMS
         private void btnCancelModif_Click(object sender, EventArgs e)
         {
             this.loadClient();
+
         }
 
         /// <summary>
