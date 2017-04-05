@@ -37,6 +37,14 @@
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            // 
             // btnValidCreationClient
             // 
             this.btnValidCreationClient.Location = new System.Drawing.Point(12, 621);

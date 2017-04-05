@@ -11,20 +11,34 @@ namespace ABIMS
 {
     public partial class AjoutClient : ABIMS.ParentClient
     {
+        /// <summary>
+        /// fenetre parente
+        /// </summary>
         private ListClient parent;
       
-
+        /// <summary>
+        /// constructeur
+        /// </summary>
+        /// <param name="parent"></param>
         public AjoutClient(ListClient parent)
         {
             this.parent = parent;
             InitializeComponent();
         }
-
+        /// <summary>
+        /// annuler la création client et fermer la fenetre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelCreationClient_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// au clic sur le bouton, permet la creation et la memorisation d'un nouveau client
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnValidCreationClient_Click(object sender, EventArgs e)
         {
            try
@@ -66,11 +80,11 @@ namespace ABIMS
                 {
                     Nature = null;
                 }
-                Client client = new Client(Id, Name, TypeClient, ActivityDomain, Adresse, PhoneNumber, SalesRevenu, Staff);
+                Client client = new Client(Id, Name, TypeClient,Nature, ActivityDomain, Adresse, PhoneNumber, SalesRevenu, Staff);
                 Clients.clients.ListClients.Add(client);
                 MessageBox.Show("Le client a bien été créé", "Creation client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.parent.Datagridview.Refresh();
-                if (this.checkBox1.Checked)
+                if (this.checkBox1.Checked)//si checkbox "voir fiche client" est cochée
                 {
                     DetailClient dc = new DetailClient(client, parent);
                     parent.WindowsList.Add(dc);
@@ -86,10 +100,22 @@ namespace ABIMS
                 MessageBox.Show("Attention saisie incorrecte", "Creation client KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        /// <summary>
+        /// reinitialise les champs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnResetCreationClient_Click(object sender, EventArgs e)
         {
-
+            this.tbAdress.Text = "";
+            this.tbId.Text = "";
+            this.tbCA.Text = "";
+            this.tbDA.Text = "";
+            this.tbName.Text = "";
+            this.tbStaff.Text = "";
+            this.tbTel.Text = "";
+            this.comboBox1.Text = "";
+            this.comboBox2.Text = "";
         }
     }
 }

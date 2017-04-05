@@ -10,10 +10,14 @@ namespace ABIMS.Model
 {
     public class Clients
     {
-
+        /// <summary>
+        /// singleton
+        /// </summary>
         private static Clients _clients = null;
 
-
+        /// <summary>
+        /// liste de clients
+        /// </summary>
         private BindingList<Client> listClients;
 
         public static Clients clients
@@ -27,7 +31,7 @@ namespace ABIMS.Model
                 return _clients;
             }
         }
-
+       
         public BindingList<Client> ListClients
         {
             get
@@ -40,23 +44,42 @@ namespace ABIMS.Model
                 listClients = value;
             }
         }
-
+        /// <summary>
+        /// constructeur
+        /// </summary>
         public Clients()
         {
             this.ListClients = new BindingList<Client>();
             this.test();
         }
-
+        /// <summary>
+        /// ajouter un client à la liste
+        /// </summary>
+        /// <param name="client"></param>
         public void AddClient(Client client)
         {          
             ListClients.Add(client);              
         }
-
+        /// <summary>
+        /// supprimer un client de la liste
+        /// </summary>
+        /// <param name="client"></param>
         public void RemoveClient(Client client)
         {
             ListClients.Remove(client);
         }
-
+        /// <summary>
+        /// mettre à jour le client
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="Id"></param>
+        /// <param name="Name"></param>
+        /// <param name="Type"></param>
+        /// <param name="ActivityDomain"></param>
+        /// <param name="Adresse"></param>
+        /// <param name="PhoneNumber"></param>
+        /// <param name="SalesRevenu"></param>
+        /// <param name="Staff"></param>
         public void UpdateClient(Client client, Int32 Id, String Name, String Type, String ActivityDomain, String Adresse, String PhoneNumber, Int32 SalesRevenu, Int32 Staff)
         {
             client.Id = Id;
@@ -68,6 +91,11 @@ namespace ABIMS.Model
             client.SalesRevenu = SalesRevenu;
             client.Staff = Staff;
         }
+        /// <summary>
+        /// retourne un client en fonction de son id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Client findClientByID(Int32 id)
         {
             foreach(Client client in this.ListClients)
@@ -76,7 +104,11 @@ namespace ABIMS.Model
             }
             return null;
         }
-
+        /// <summary>
+        /// retourne une liste de clients en fonction du nom client
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
         public List<Client>findClientByName(String Name)
         {
             List<Client> result = new List<Client>();
@@ -86,18 +118,16 @@ namespace ABIMS.Model
             }
             return result;
         }
-
+        /// <summary>
+        /// jeu d'essai
+        /// </summary>
         public void test()
         {
-            this.ListClients.Add(new Model.Client(1, "a", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
-            this.ListClients.Add(new Model.Client(2, "aa", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
-            this.ListClients.Add(new Model.Client(3, "b", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
-            this.ListClients.Add(new Model.Client(4, "bc", Client.TYPE_PUBLIC, "", "", "0123456789", 1, 1));
-            this.ListClients.Add(new Model.Client(5, "bcb", Client.TYPE_PRIVATE, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(1, "a", Client.TYPE_PUBLIC,Client.NATURE_MAIN, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(2, "aa", Client.TYPE_PUBLIC, Client.NATURE_OLD, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(3, "b", Client.TYPE_PUBLIC, Client.NATURE_SECONDARY, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(4, "bc", Client.TYPE_PUBLIC, Client.NATURE_MAIN, "", "", "0123456789", 1, 1));
+            this.ListClients.Add(new Model.Client(5, "bcb", Client.TYPE_PRIVATE, Client.NATURE_MAIN, "", "", "0123456789", 1, 1));
         }
-
-
-
-
     }
 }

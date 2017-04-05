@@ -30,7 +30,7 @@ namespace ABIMS.Model
         private List<Comment> commentList;
 
         [System.ComponentModel.DisplayName("Id")]
-        public int Id
+        public Int32 Id
         {
             get
             {
@@ -43,7 +43,7 @@ namespace ABIMS.Model
             }
         }
         [System.ComponentModel.DisplayName("Raison sociale")]
-        public string Name
+        public String Name
         {
             get
             {
@@ -57,7 +57,7 @@ namespace ABIMS.Model
         }
 
         [System.ComponentModel.DisplayName("Type")]
-        public string Type
+        public String Type
         {
             get
             {
@@ -71,7 +71,7 @@ namespace ABIMS.Model
         }
 
         [System.ComponentModel.DisplayName("Domaine d'activité")]
-        public string ActivityDomain
+        public String ActivityDomain
         {
             get
             {
@@ -85,7 +85,7 @@ namespace ABIMS.Model
         }
 
         [System.ComponentModel.DisplayName("Adresse")]
-        public string Adresse
+        public String Adresse
         {
             get
             {
@@ -99,7 +99,7 @@ namespace ABIMS.Model
         }
 
         [System.ComponentModel.DisplayName("Téléphone")]
-        public string PhoneNumber
+        public String PhoneNumber
         {
             get
             {
@@ -113,7 +113,7 @@ namespace ABIMS.Model
         }
 
         [System.ComponentModel.DisplayName("Chiffre d'affaire")]
-        public int SalesRevenu
+        public Int32 SalesRevenu
         {
             get
             {
@@ -127,7 +127,7 @@ namespace ABIMS.Model
         }
 
         [System.ComponentModel.DisplayName("Effectif")]
-        public int Staff
+        public Int32 Staff
         {
             get
             {
@@ -167,7 +167,7 @@ namespace ABIMS.Model
         }
 
         [System.ComponentModel.DisplayName("Nature")]
-        public string Nature
+        public String Nature
         {
             get
             {
@@ -180,7 +180,7 @@ namespace ABIMS.Model
             }
         }
 
-        public Client(int id, string name, string type, string activityDomain, string adresse, string phoneNumber, int salesRevenu, int staff)
+        public Client(Int32 id, String name, String type,String nature, String activityDomain, String adresse, String phoneNumber, Int32 salesRevenu, Int32 staff)
         {
             Id = id;
             Name = name;

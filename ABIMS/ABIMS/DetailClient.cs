@@ -12,11 +12,19 @@ namespace ABIMS
     public partial class DetailClient : ABIMS.ParentClient
     {
 
-
+        /// <summary>
+        /// client concerné par la fiche client
+        /// </summary>
         private Client client;
-      
+
+        /// <summary>
+        /// fenetre parente
+        /// </summary>
         private ListClient parent;
 
+        /// <summary>
+        /// simple accesseur en readonly
+        /// </summary>
         public CheckBox CbKeepOpen
         {
             get
@@ -25,7 +33,11 @@ namespace ABIMS
             }
         }
 
-
+        /// <summary>
+        /// constructeur
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="parent"></param>
         public DetailClient(Client client, ListClient parent)
         {
             this.parent = parent;
@@ -47,6 +59,10 @@ namespace ABIMS
                 client = value;
             }
         }
+
+        /// <summary>
+        /// initialise les champs avec les infos du client
+        /// </summary>
         public void loadClient()
         {
             this.tbId.Text = this.Client.Id.ToString();
@@ -65,6 +81,11 @@ namespace ABIMS
             }
         }
 
+        /// <summary>
+        /// permet d'alterner l'etat des champs en fonction de la checkbox "modification"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbModifications_CheckedChanged(object sender, EventArgs e)
         {            
             this.tbId.Enabled = !this.tbId.Enabled;
@@ -80,11 +101,21 @@ namespace ABIMS
             this.btnCancelModif.Enabled = !this.btnCancelModif.Enabled;
         }
 
+        /// <summary>
+        /// reinitialiser les champs aux valeurs initiales
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelModif_Click(object sender, EventArgs e)
         {
             this.loadClient();
         }
 
+        /// <summary>
+        /// valider les modifications
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnValidModif_Click(object sender, EventArgs e)
         {
 
@@ -130,6 +161,11 @@ namespace ABIMS
             }
         }
 
+        /// <summary>
+        /// supprimer le client
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDeleteClient_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Êtes vous sûr de vouloir supprimer ce client ?", "Supprimer Client", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
@@ -147,7 +183,11 @@ namespace ABIMS
                 }
             }
         }
-
+        /// <summary>
+        /// permet au parent d'oublier cette fenetre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DetailClient_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.parent.WindowsList.Remove(this);

@@ -14,12 +14,22 @@ namespace ABIMS
 {
     public partial class ListClient : Form
     {
+        /// <summary>
+        /// formulaire parent 
+        /// </summary>
         private Form1 parent;
-        private List<DetailClient> windowsList; 
-
+        /// <summary>
+        /// liste des fenetres clients actuellement ouverte
+        /// </summary>
+        private List<DetailClient> windowsList;
+        /// <summary>
+        /// liste des derniers clients consultés
+        /// </summary>
         private List<Client> lastClientList;
-
-        private BindingSource source;
+        /// <summary>
+        ///source du datagrid
+        /// </summary>
+        private BindingSource source; 
 
         public List<DetailClient> WindowsList
         {
@@ -46,7 +56,9 @@ namespace ABIMS
                 lastClientList = value;
             }
         }
-
+        /// <summary>
+        /// accesseur vers le datagridview (principalement pour refresh)
+        /// </summary>
         public DataGridView Datagridview
         {
             get
@@ -54,7 +66,10 @@ namespace ABIMS
                 return this.dataGridView1;
             }
         }
-
+        /// <summary>
+        /// constructeur
+        /// </summary>
+        /// <param name="parent"></param>
         public ListClient(Form1 parent)
         {
             this.parent = parent; 
@@ -64,17 +79,26 @@ namespace ABIMS
             InitializeComponent();
             initGrid();
         }
-
+        /// <summary>
+        /// peuple le datagrid depuis la source
+        /// </summary>
         private void populateGrid()
         {
             this.dataGridView1.DataSource = source;
             this.dataGridView1.Refresh();
         }
+        /// <summary>
+        /// initialisation du datagrid
+        /// </summary>
         private void initGrid()
         {
             this.dataGridView1.DataSource = new BindingList<Client>();
             this.dataGridView1.Refresh();
         }
+        /// <summary>
+        /// fermer les fiches clients d'un client qui vient d'etre supprimé
+        /// </summary>
+        /// <param name="client"></param>
         public void closeDeletedClient(Client client)
         {
             List<DetailClient> ldc = new List<DetailClient>();
@@ -90,17 +114,29 @@ namespace ABIMS
                 dc.Close();
             }
         }
+        /// <summary>
+        /// garder en mémoire les derniers clients consultés sans doublons
+        /// </summary>
+        /// <param name="client"></param>
         public void updateLastClientList(Client client)
         {
             if (this.cbbLastsSeen.Items.Count >= 10) this.cbbLastsSeen.Items.RemoveAt(0);
             if(!this.cbbLastsSeen.Items.Contains(client))this.cbbLastsSeen.Items.Add(client);
         }
+        /// <summary>
+        /// enleve de l'historique de clients consultés un client qui aurait été supprimé
+        /// </summary>
+        /// <param name="client"></param>
         public void deleteLastClientList(Client client)
         {
             if(!Clients.clients.ListClients.Contains(client)&& this.cbbLastsSeen.Items.Contains(client))
                 this.cbbLastsSeen.Items.Remove(client);
         }
-       
+       /// <summary>
+       /// ouvrir une fiche client au double clic sur le datagridview
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.CurrentRow != null)
@@ -113,17 +149,21 @@ namespace ABIMS
             }  
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// ouvre une fenetre de création client
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
             AjoutClient ac = new AjoutClient(this);
             ac.ShowDialog();
         }
-
+        /// <summary>
+        /// ouvres les fiches clients de tous les clients selectionnés dans le datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button5_Click(object sender, EventArgs e)
         {
 
@@ -137,7 +177,11 @@ namespace ABIMS
                 dc.Show();
             }
         }
-
+        /// <summary>
+        /// ferme toutes les fiches clients ouvertes dont la checkbox "garder ouvert" n'est pas cochée
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button8_Click(object sender, EventArgs e)
         {
             List<DetailClient> temp = new List<DetailClient>();
@@ -154,7 +198,11 @@ namespace ABIMS
                 WindowsList.Remove(dc);
             }
         }
-
+        /// <summary>
+        /// supprimer tous les clients selectionnés
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button6_Click(object sender, EventArgs e)
         {
             DataGridViewSelectedRowCollection SelectedRows = dataGridView1.SelectedRows;
@@ -178,7 +226,11 @@ namespace ABIMS
                 }
             }
         }
-
+        /// <summary>
+        /// ouvre une fiche de detail client parmi l'historique de clients consultés
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button7_Click(object sender, EventArgs e)
         {
             if (cbbLastsSeen.SelectedItem != null)
@@ -188,17 +240,29 @@ namespace ABIMS
                 dc.Show();
             }
         }
-
+        /// <summary>
+        /// affiche le datagridview avec la liste de client complete
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             populateGrid();
         }
-
+        /// <summary>
+        /// vide le datagridview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             initGrid();
         }
-
+        /// <summary>
+        /// rechercher un client en fonction de son nom ou de son ID, si l'option correspondante est cochée
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             String strSearch = this.tbSearch.Text;
@@ -227,10 +291,14 @@ namespace ABIMS
 
         }
 
-        //fermeture de la fenetre
+        /// <summary>
+        /// a la fermeture de cette fenetre, permet au parent d'oublier cette fenetre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ListClient_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.parent.ListWindowListClient.Remove(this);//permet au parent d'oublier cette fenetre
+            this.parent.ListWindowListClient.Remove(this);
         }
     }
 }
