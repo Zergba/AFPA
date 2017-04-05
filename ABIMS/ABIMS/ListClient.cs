@@ -103,11 +103,14 @@ namespace ABIMS
        
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Client client = (Client)dataGridView1.CurrentRow.DataBoundItem;
-            DetailClient dc = new DetailClient(client,this);
-            updateLastClientList(client);
-            WindowsList.Add(dc);
-            dc.Show();    
+            if (dataGridView1.CurrentRow != null)
+            {
+                Client client = (Client)dataGridView1.CurrentRow.DataBoundItem;
+                DetailClient dc = new DetailClient(client, this);
+                updateLastClientList(client);
+                WindowsList.Add(dc);
+                dc.Show();
+            }  
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

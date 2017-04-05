@@ -86,5 +86,10 @@ namespace ABIMS
                 MessageBox.Show("Attention saisie incorrecte", "Creation client KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnResetCreationClient_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

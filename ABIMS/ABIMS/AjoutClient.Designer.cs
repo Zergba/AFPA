@@ -77,6 +77,7 @@
             this.btnResetCreationClient.TabIndex = 5;
             this.btnResetCreationClient.Text = "Réinitialiser la création";
             this.btnResetCreationClient.UseVisualStyleBackColor = true;
+            this.btnResetCreationClient.Click += new System.EventHandler(this.btnResetCreationClient_Click);
             // 
             // AjoutClient
             // 
