@@ -109,6 +109,8 @@ namespace ABIMS
             this.tbSearch.Size = new System.Drawing.Size(187, 20);
             this.tbSearch.TabIndex = 4;
             this.tbSearch.Text = "Saisir les termes de votre recherche";
+            this.tbSearch.Enter += new System.EventHandler(this.tbSearch_Enter);
+
             // 
             // cbNameProject
             // 

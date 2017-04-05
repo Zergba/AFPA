@@ -288,7 +288,7 @@ namespace ABIMS
 
             }
             this.Datagridview.DataSource = searchList;
-
+            this.tbSearch.Text = "Saisir les termes de votre recherche";
         }
 
         /// <summary>
@@ -299,6 +299,14 @@ namespace ABIMS
         private void ListClient_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.parent.ListWindowListClient.Remove(this);
+        }
+
+        private void tbSearch_Enter(object sender, EventArgs e)
+        {
+            if (tbSearch.Text == "Saisir les termes de votre recherche")
+            {
+                tbSearch.Text = "";
+            }
         }
     }
 }
