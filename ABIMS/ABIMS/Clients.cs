@@ -82,7 +82,7 @@ namespace ABIMS.Model
             List<Client> result = new List<Client>();
             foreach (Client client in this.ListClients)
             {
-                if (client.Name == Name) result.Add(client);
+                if (client.Name==Name)result.Add(client);
             }
             return result;
         }

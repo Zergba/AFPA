@@ -289,6 +289,7 @@ namespace ABIMS
             this.Controls.Add(this.menuStrip1);
             this.Name = "ListClient";
             this.Text = "ABIMS - Liste de clients";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListClient_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

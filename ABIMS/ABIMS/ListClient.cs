@@ -206,10 +206,31 @@ namespace ABIMS
 
             if (cbIdClient.Checked)
             {
-              //  searchList.Add
+                try
+                {
+                    searchList.Add(Clients.clients.findClientByID(Int32.Parse(strSearch)));
+                }catch(Exception ex)
+                {
+                    //MessageBox.Show("recherche par ID impossible", "chercher client par ID KO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            if (cbNameClient.Checked)
+            {
+                List<Client> lc = Clients.clients.findClientByName(strSearch);
+                foreach(Client client in lc)
+                {
+                    searchList.Add(client);
+                }
 
+            }
+            this.Datagridview.DataSource = searchList;
 
+        }
+
+        //fermeture de la fenetre
+        private void ListClient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.parent.ListWindowListClient.Remove(this);//permet au parent d'oublier cette fenetre
         }
     }
 }

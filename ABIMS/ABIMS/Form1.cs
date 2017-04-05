@@ -12,7 +12,8 @@ namespace ABIMS
 {
     public partial class Form1 : Form
     {
-        private List<ListClient> listWindowListClient;
+
+        private List<ListClient> listWindowListClient;//liste des fenetres listClient ouvertes;
         public Form1()
         {
             this.ListWindowListClient = new List<ListClient>();
