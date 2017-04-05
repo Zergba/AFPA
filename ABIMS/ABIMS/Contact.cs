@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ABIMS.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,15 @@ namespace ABIMS
 {
     public class Contact
     {
+        Int32 id;
+        Client client;
         String name;
+        String function;
         String phone;
         String email;
         Int32 totalTimeWorked;
 
+        [System.ComponentModel.DisplayName("Nom Contact")]
         public string Name
         {
             get
@@ -25,7 +30,7 @@ namespace ABIMS
                 name = value;
             }
         }
-
+        [System.ComponentModel.DisplayName("Téléphone")]
         public string Phone
         {
             get
@@ -39,6 +44,7 @@ namespace ABIMS
             }
         }
 
+        [System.ComponentModel.DisplayName("Adresse Email")]
         public string Email
         {
             get
@@ -52,6 +58,7 @@ namespace ABIMS
             }
         }
 
+        [System.ComponentModel.DisplayName("Temps d'intervention cumulé")]
         public int TotalTimeWorked
         {
             get
@@ -62,6 +69,20 @@ namespace ABIMS
             set
             {
                 totalTimeWorked = value;
+            }
+        }
+
+        [System.ComponentModel.DisplayName("Fonction")]
+        public string Function
+        {
+            get
+            {
+                return function;
+            }
+
+            set
+            {
+                function = value;
             }
         }
     }

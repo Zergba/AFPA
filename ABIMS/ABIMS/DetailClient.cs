@@ -45,6 +45,7 @@ namespace ABIMS
        
             InitializeComponent();
             loadClient();
+            initGrid();
         }
 
         public Client Client
@@ -80,6 +81,11 @@ namespace ABIMS
                 this.comboBox1.SelectedIndex = 1;
             }
             this.lbComment.DataSource = new BindingSource(this.Client.CommentList,null);
+        }
+        private void initGrid()
+        {
+            this.dataGridViewContact.DataSource = new BindingSource(this.Client.ContactList, null);
+            this.dataGridViewContact.Refresh();
         }
 
         /// <summary>

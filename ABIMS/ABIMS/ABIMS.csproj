@@ -52,6 +52,12 @@
     <Compile Include="AjoutClient.Designer.cs">
       <DependentUpon>AjoutClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="AjoutContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutContact.Designer.cs">
+      <DependentUpon>AjoutContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs" />
     <Compile Include="Clients.cs" />
     <Compile Include="Comment.cs" />
@@ -90,6 +96,9 @@
     <Compile Include="RessourcesString.cs" />
     <EmbeddedResource Include="AjoutClient.resx">
       <DependentUpon>AjoutClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutContact.resx">
+      <DependentUpon>AjoutContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailClient.resx">
       <DependentUpon>DetailClient.cs</DependentUpon>
