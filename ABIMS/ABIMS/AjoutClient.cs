@@ -80,7 +80,7 @@ namespace ABIMS
                 {
                     Nature = null;
                 }
-                Client client = new Client(Id, Name, TypeClient,Nature, ActivityDomain, Adresse, PhoneNumber, SalesRevenu, Staff);
+                Client client = new Client(Name, TypeClient,Nature, ActivityDomain, Adresse, PhoneNumber, SalesRevenu, Staff);
                 Clients.clients.ListClients.Add(client);
                 MessageBox.Show("Le client a bien été créé", "Creation client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.parent.Datagridview.Refresh();

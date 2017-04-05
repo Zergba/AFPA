@@ -16,6 +16,7 @@ namespace ABIMS.Model
         public const String NATURE_SECONDARY = "secondaire";
         public const String NATURE_OLD = "Ancienne";
 
+        private static Int32 countID = 0;
         
         private Int32 id;
         private String name;
@@ -180,16 +181,16 @@ namespace ABIMS.Model
             }
         }
 
-        public Client(Int32 id, String name, String type,String nature, String activityDomain, String adresse, String phoneNumber, Int32 salesRevenu, Int32 staff)
+        public Client(String name, String type,String nature, String activityDomain, String adresse, String phoneNumber, Int32 salesRevenu, Int32 staff)
         {
-            Id = id;
-            Name = name;
-            Type = type;
-            ActivityDomain = activityDomain;
-            Adresse = adresse;
-            PhoneNumber = phoneNumber;
-            SalesRevenu = salesRevenu;
-            Staff = staff;
+            this.Id = Client.countID++;
+            this.Name = name;
+            this.Type = type;
+            this.ActivityDomain = activityDomain;
+            this.Adresse = adresse;
+            this.PhoneNumber = phoneNumber;
+            this.SalesRevenu = salesRevenu;
+            this.Staff = staff;
         }
 
         public override string ToString()
