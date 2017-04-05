@@ -59,16 +59,20 @@ namespace ABIMS
         {         
             this.WindowsList = new List<DetailClient>();
             this.LastClientList = new List<Client>();
+            this.source = new BindingSource(Clients.clients.ListClients, null);
             InitializeComponent();
             initGrid();
-           
         }
 
-
+        private void populateGrid()
+        {
+            this.dataGridView1.DataSource = source;
+            this.dataGridView1.Refresh();
+        }
         private void initGrid()
         {
-            this.source = new BindingSource(Clients.clients.ListClients, null);
-            this.dataGridView1.DataSource = source;
+            this.dataGridView1.DataSource = new BindingList<Client>();
+            this.dataGridView1.Refresh();
         }
 
         public void updateLastClientList(Client client)
@@ -104,6 +108,7 @@ namespace ABIMS
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             DataGridViewSelectedRowCollection SelectedRows = dataGridView1.SelectedRows;
             foreach(DataGridViewRow row in SelectedRows)
             {
@@ -156,9 +161,22 @@ namespace ABIMS
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Client client = (Client)cbbLastsSeen.SelectedItem;
-            DetailClient dc = new DetailClient(client, this);
-            dc.Show();
+            if (cbbLastsSeen.SelectedItem != null)
+            {
+                Client client = (Client)cbbLastsSeen.SelectedItem;
+                DetailClient dc = new DetailClient(client, this);
+                dc.Show();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            populateGrid();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            initGrid();
         }
     }
 }

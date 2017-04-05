@@ -16,7 +16,7 @@ namespace ABIMS.Model
         public const String NATURE_SECONDARY = "secondaire";
         public const String NATURE_OLD = "Ancienne";
 
-
+        
         private Int32 id;
         private String name;
         private String type;
@@ -29,6 +29,7 @@ namespace ABIMS.Model
         private List<Contact> contactList;
         private List<Comment> commentList;
 
+        [System.ComponentModel.DisplayName("Id")]
         public int Id
         {
             get
@@ -41,7 +42,7 @@ namespace ABIMS.Model
                 id = value;
             }
         }
-
+        [System.ComponentModel.DisplayName("Raison sociale")]
         public string Name
         {
             get
@@ -55,6 +56,7 @@ namespace ABIMS.Model
             }
         }
 
+        [System.ComponentModel.DisplayName("Type")]
         public string Type
         {
             get
@@ -68,6 +70,7 @@ namespace ABIMS.Model
             }
         }
 
+        [System.ComponentModel.DisplayName("Domaine d'activité")]
         public string ActivityDomain
         {
             get
@@ -81,6 +84,7 @@ namespace ABIMS.Model
             }
         }
 
+        [System.ComponentModel.DisplayName("Adresse")]
         public string Adresse
         {
             get
@@ -94,6 +98,7 @@ namespace ABIMS.Model
             }
         }
 
+        [System.ComponentModel.DisplayName("Téléphone")]
         public string PhoneNumber
         {
             get
@@ -107,6 +112,7 @@ namespace ABIMS.Model
             }
         }
 
+        [System.ComponentModel.DisplayName("Chiffre d'affaire")]
         public int SalesRevenu
         {
             get
@@ -120,6 +126,7 @@ namespace ABIMS.Model
             }
         }
 
+        [System.ComponentModel.DisplayName("Effectif")]
         public int Staff
         {
             get
@@ -159,6 +166,7 @@ namespace ABIMS.Model
             }
         }
 
+        [System.ComponentModel.DisplayName("Nature")]
         public string Nature
         {
             get
