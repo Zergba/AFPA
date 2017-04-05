@@ -54,12 +54,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewContact = new System.Windows.Forms.DataGridView();
-            this.btnAddClient = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbComment = new System.Windows.Forms.ListBox();
             this.gbAddComment = new System.Windows.Forms.GroupBox();
             this.tbAddComment = new System.Windows.Forms.TextBox();
+            this.btnAddClient = new System.Windows.Forms.Button();
+            this.lbComment = new System.Windows.Forms.ListBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -340,28 +340,12 @@
             // 
             this.dataGridViewContact.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewContact.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewContact.MultiSelect = false;
             this.dataGridViewContact.Name = "dataGridViewContact";
+            this.dataGridViewContact.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewContact.Size = new System.Drawing.Size(505, 226);
             this.dataGridViewContact.TabIndex = 0;
             this.dataGridViewContact.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnAddClient
-            // 
-            this.btnAddClient.Location = new System.Drawing.Point(6, 151);
-            this.btnAddClient.Name = "btnAddClient";
-            this.btnAddClient.Size = new System.Drawing.Size(127, 23);
-            this.btnAddClient.TabIndex = 1;
-            this.btnAddClient.Text = "Ajouter un commentaire";
-            this.btnAddClient.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(6, 237);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(130, 23);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Supprimer Commentaire";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -376,14 +360,6 @@
             this.tabPage2.Text = "Commentaires";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // lbComment
-            // 
-            this.lbComment.FormattingEnabled = true;
-            this.lbComment.Location = new System.Drawing.Point(150, 9);
-            this.lbComment.Name = "lbComment";
-            this.lbComment.Size = new System.Drawing.Size(349, 251);
-            this.lbComment.TabIndex = 3;
             // 
             // gbAddComment
             // 
@@ -403,6 +379,32 @@
             this.tbAddComment.Name = "tbAddComment";
             this.tbAddComment.Size = new System.Drawing.Size(123, 126);
             this.tbAddComment.TabIndex = 2;
+            // 
+            // btnAddClient
+            // 
+            this.btnAddClient.Location = new System.Drawing.Point(6, 151);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(127, 23);
+            this.btnAddClient.TabIndex = 1;
+            this.btnAddClient.Text = "Ajouter un commentaire";
+            this.btnAddClient.UseVisualStyleBackColor = true;
+            // 
+            // lbComment
+            // 
+            this.lbComment.FormattingEnabled = true;
+            this.lbComment.Location = new System.Drawing.Point(150, 9);
+            this.lbComment.Name = "lbComment";
+            this.lbComment.Size = new System.Drawing.Size(349, 251);
+            this.lbComment.TabIndex = 3;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(6, 237);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(130, 23);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Supprimer Commentaire";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // ParentClient
             // 

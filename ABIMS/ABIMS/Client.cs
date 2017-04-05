@@ -194,7 +194,19 @@ namespace ABIMS.Model
                 countID = value;
             }
         }
-
+        public Client()
+        {
+            this.Id = Client.CountID++;
+            this.Name = null;
+            this.Type = null;
+            this.ActivityDomain = null;
+            this.Adresse = null;
+            this.PhoneNumber = null;
+            this.SalesRevenu = 0;
+            this.Staff = 0;
+            this.commentList = new BindingList<Comment>();
+            this.ContactList = new BindingList<Contact>();
+        }
         public Client(String name, String type,String nature, String activityDomain, String adresse, String phoneNumber, Int32 salesRevenu, Int32 staff, BindingList<Comment> commentList, BindingList<Contact> contactList)
         {
             this.Id = Client.CountID++;

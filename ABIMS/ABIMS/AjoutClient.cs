@@ -15,8 +15,21 @@ namespace ABIMS
         /// fenetre parente
         /// </summary>
         private ListClient parent;
-        private BindingList<Comment> localCommentList;
-      
+        private Client client;
+
+        public Client Client
+        {
+            get
+            {
+                return client;
+            }
+
+            set
+            {
+                client = value;
+            }
+        }
+
         /// <summary>
         /// constructeur
         /// </summary>
@@ -24,10 +37,16 @@ namespace ABIMS
         public AjoutClient(ListClient parent)
         {
             this.parent = parent;
+            this.Client = new Client();
             InitializeComponent();
             tbId.Text = Client.CountID.ToString();
-            this.localCommentList = new BindingList<Comment>();
-            this.lbComment.DataSource = new BindingSource(this.localCommentList, null);
+            this.lbComment.DataSource = new BindingSource(this.Client.CommentList, null);
+            this.initGrid();
+        }
+        private void initGrid()
+        {
+            this.dataGridViewContact.DataSource = new BindingSource(this.Client.ContactList, null);
+            this.dataGridViewContact.Refresh();
         }
         /// <summary>
         /// annuler la création client et fermer la fenetre
@@ -83,15 +102,15 @@ namespace ABIMS
                 {
                     Nature = null;
                 }
-                Client client = new Client(Name, TypeClient,Nature, ActivityDomain, Adresse, PhoneNumber, SalesRevenu, Staff,localCommentList, new BindingList<Contact>());
-                Clients.clients.ListClients.Add(client);
+               
+                Clients.clients.ListClients.Add(Client);
                 MessageBox.Show("Le client a bien été créé", "Creation client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.parent.Datagridview.Refresh();
                 if (this.checkBox1.Checked)//si checkbox "voir fiche client" est cochée
                 {
-                    DetailClient dc = new DetailClient(client, parent);
+                    DetailClient dc = new DetailClient(Client, parent);
                     parent.WindowsList.Add(dc);
-                    parent.updateLastClientList(client);
+                    parent.updateLastClientList(Client);
                     dc.Show();
                     
                 }
@@ -123,7 +142,7 @@ namespace ABIMS
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            this.localCommentList.Add(new Comment(this.tbAddComment.Text));
+            this.Client.CommentList.Add(new Comment(this.tbAddComment.Text));
             this.tbAddComment.Text = "";
             this.lbComment.Refresh();
         }
@@ -134,9 +153,23 @@ namespace ABIMS
             Comment comm = (Comment)lbComment.SelectedItem;
             if (comm != null&& MessageBox.Show("Êtes vous sûr de vouloir supprimer ce commentaire ?", "Supprimer Commentaire", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                this.localCommentList.Remove(comm);
+                this.Client.CommentList.Remove(comm);
                 this.lbComment.Refresh();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AjoutContact ac = new AjoutContact(Client, this.dataGridViewContact);
+            ac.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = this.dataGridViewContact.CurrentRow;
+            Contact contact = (Contact)row.DataBoundItem;
+            Client.ContactList.Remove(contact);
+            dataGridViewContact.Refresh();
         }
     }
 }

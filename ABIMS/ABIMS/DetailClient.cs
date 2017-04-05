@@ -215,5 +215,19 @@ namespace ABIMS
                     this.lbComment.Refresh();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AjoutContact ac = new AjoutContact(Client, this.dataGridViewContact);
+            ac.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = this.dataGridViewContact.CurrentRow;
+            Contact contact = (Contact)row.DataBoundItem;
+            Client.ContactList.Remove(contact);
+            dataGridViewContact.Refresh();
+        }
     }
 }

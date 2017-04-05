@@ -100,6 +100,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(353, 232);
             this.button3.Size = new System.Drawing.Size(113, 23);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -109,6 +110,7 @@
             // button1
             // 
             this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 

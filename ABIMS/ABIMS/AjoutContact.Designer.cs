@@ -33,16 +33,16 @@
             this.lblID = new System.Windows.Forms.Label();
             this.lblClient = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbIdContact = new System.Windows.Forms.TextBox();
+            this.tbClient = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblFonction = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.tbFonction = new System.Windows.Forms.TextBox();
-            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.tbFonction = new System.Windows.Forms.TextBox();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.lblFonction = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Valider création contact";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -63,6 +64,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Annuler Création Contact";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblID
             // 
@@ -91,21 +93,21 @@
             this.lblName.TabIndex = 4;
             this.lblName.Text = "Nom";
             // 
-            // textBox1
+            // tbIdContact
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(68, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(38, 20);
-            this.textBox1.TabIndex = 5;
+            this.tbIdContact.Enabled = false;
+            this.tbIdContact.Location = new System.Drawing.Point(68, 10);
+            this.tbIdContact.Name = "tbIdContact";
+            this.tbIdContact.Size = new System.Drawing.Size(38, 20);
+            this.tbIdContact.TabIndex = 5;
             // 
-            // textBox2
+            // tbClient
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(151, 10);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(214, 20);
-            this.textBox2.TabIndex = 6;
+            this.tbClient.Enabled = false;
+            this.tbClient.Location = new System.Drawing.Point(151, 10);
+            this.tbClient.Name = "tbClient";
+            this.tbClient.Size = new System.Drawing.Size(214, 20);
+            this.tbClient.TabIndex = 6;
             // 
             // tbName
             // 
@@ -116,7 +118,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.lblEmail);
             this.groupBox1.Controls.Add(this.tbPhone);
             this.groupBox1.Controls.Add(this.tbFonction);
@@ -131,37 +133,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informations contact";
             // 
-            // lblFonction
+            // tbEmail
             // 
-            this.lblFonction.AutoSize = true;
-            this.lblFonction.Location = new System.Drawing.Point(6, 61);
-            this.lblFonction.Name = "lblFonction";
-            this.lblFonction.Size = new System.Drawing.Size(48, 13);
-            this.lblFonction.TabIndex = 8;
-            this.lblFonction.Text = "Fonction";
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(6, 99);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(58, 13);
-            this.lblPhone.TabIndex = 9;
-            this.lblPhone.Text = "Téléphone";
-            // 
-            // tbFonction
-            // 
-            this.tbFonction.Location = new System.Drawing.Point(102, 58);
-            this.tbFonction.Name = "tbFonction";
-            this.tbFonction.Size = new System.Drawing.Size(250, 20);
-            this.tbFonction.TabIndex = 10;
-            // 
-            // tbPhone
-            // 
-            this.tbPhone.Location = new System.Drawing.Point(102, 96);
-            this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Size = new System.Drawing.Size(250, 20);
-            this.tbPhone.TabIndex = 11;
+            this.tbEmail.Location = new System.Drawing.Point(102, 134);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(250, 20);
+            this.tbEmail.TabIndex = 13;
             // 
             // lblEmail
             // 
@@ -172,12 +149,37 @@
             this.lblEmail.TabIndex = 12;
             this.lblEmail.Text = "Adresse Email";
             // 
-            // textBox3
+            // tbPhone
             // 
-            this.textBox3.Location = new System.Drawing.Point(102, 134);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 20);
-            this.textBox3.TabIndex = 13;
+            this.tbPhone.Location = new System.Drawing.Point(102, 96);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Size = new System.Drawing.Size(250, 20);
+            this.tbPhone.TabIndex = 11;
+            // 
+            // tbFonction
+            // 
+            this.tbFonction.Location = new System.Drawing.Point(102, 58);
+            this.tbFonction.Name = "tbFonction";
+            this.tbFonction.Size = new System.Drawing.Size(250, 20);
+            this.tbFonction.TabIndex = 10;
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(6, 99);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(58, 13);
+            this.lblPhone.TabIndex = 9;
+            this.lblPhone.Text = "Téléphone";
+            // 
+            // lblFonction
+            // 
+            this.lblFonction.AutoSize = true;
+            this.lblFonction.Location = new System.Drawing.Point(6, 61);
+            this.lblFonction.Name = "lblFonction";
+            this.lblFonction.Size = new System.Drawing.Size(48, 13);
+            this.lblFonction.TabIndex = 8;
+            this.lblFonction.Text = "Fonction";
             // 
             // AjoutContact
             // 
@@ -185,8 +187,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 240);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbClient);
+            this.Controls.Add(this.tbIdContact);
             this.Controls.Add(this.lblClient);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.button2);
@@ -207,15 +209,15 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblClient;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbIdContact;
+        private System.Windows.Forms.TextBox tbClient;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblFonction;
         private System.Windows.Forms.TextBox tbPhone;
         private System.Windows.Forms.TextBox tbFonction;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label lblEmail;
     }
 }

@@ -9,13 +9,17 @@ namespace ABIMS
 {
     public class Contact
     {
-        Int32 id;
-        Client client;
-        String name;
-        String function;
-        String phone;
-        String email;
-        Int32 totalTimeWorked;
+
+        private static Int32 countId = 1;
+
+        private Int32 id;
+        private Client client;
+        private String name;
+        private String function;
+        private String phone;
+        private String email;
+        private Int32 totalTimeWorked;
+
 
         [System.ComponentModel.DisplayName("Nom Contact")]
         public string Name
@@ -85,5 +89,30 @@ namespace ABIMS
                 function = value;
             }
         }
+
+        public static int CountId
+        {
+            get
+            {
+                return countId;
+            }
+
+            set
+            {
+                countId = value;
+            }
+        }
+
+        public Contact(Client client, string name, string function, string phone, string email, int totalTimeWorked)
+        {
+            this.id = Contact.CountId++;
+            this.client = client;
+            this.name = name;
+            this.function = function;
+            this.phone = phone;
+            this.email = email;
+            this.totalTimeWorked = totalTimeWorked;
+        }
+
     }
 }
