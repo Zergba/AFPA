@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,8 +28,8 @@ namespace ABIMS.Model
         private Int32 salesRevenu;
         private String nature;
         private Int32 staff;
-        private List<Contact> contactList;
-        private List<Comment> commentList;
+        private BindingList<Contact> contactList;
+        private BindingList<Comment> commentList;
 
         [System.ComponentModel.DisplayName("Id")]
         public Int32 Id
@@ -141,7 +142,7 @@ namespace ABIMS.Model
             }
         }
 
-        internal List<Contact> ContactList
+        internal BindingList<Contact> ContactList
         {
             get
             {
@@ -154,7 +155,7 @@ namespace ABIMS.Model
             }
         }
 
-        internal List<Comment> CommentList
+        public BindingList<Comment> CommentList
         {
             get
             {
@@ -194,7 +195,7 @@ namespace ABIMS.Model
             }
         }
 
-        public Client(String name, String type,String nature, String activityDomain, String adresse, String phoneNumber, Int32 salesRevenu, Int32 staff)
+        public Client(String name, String type,String nature, String activityDomain, String adresse, String phoneNumber, Int32 salesRevenu, Int32 staff, BindingList<Comment> commentList, BindingList<Contact> contactList)
         {
             this.Id = Client.CountID++;
             this.Name = name;
@@ -204,6 +205,21 @@ namespace ABIMS.Model
             this.PhoneNumber = phoneNumber;
             this.SalesRevenu = salesRevenu;
             this.Staff = staff;
+            this.commentList = commentList;
+            this.ContactList = ContactList;
+        }
+        public Client(String name, String type, String nature, String activityDomain, String adresse, String phoneNumber, Int32 salesRevenu, Int32 staff)
+        {
+            this.Id = Client.CountID++;
+            this.Name = name;
+            this.Type = type;
+            this.ActivityDomain = activityDomain;
+            this.Adresse = adresse;
+            this.PhoneNumber = phoneNumber;
+            this.SalesRevenu = salesRevenu;
+            this.Staff = staff;
+            this.commentList = new BindingList<Comment>();
+            this.ContactList = new BindingList<Contact>();
         }
 
         public override string ToString()

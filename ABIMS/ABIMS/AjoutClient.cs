@@ -15,6 +15,7 @@ namespace ABIMS
         /// fenetre parente
         /// </summary>
         private ListClient parent;
+        private BindingList<Comment> localCommentList;
       
         /// <summary>
         /// constructeur
@@ -25,6 +26,8 @@ namespace ABIMS
             this.parent = parent;
             InitializeComponent();
             tbId.Text = Client.CountID.ToString();
+            this.localCommentList = new BindingList<Comment>();
+            this.lbComment.DataSource = new BindingSource(this.localCommentList, null);
         }
         /// <summary>
         /// annuler la création client et fermer la fenetre
@@ -80,7 +83,7 @@ namespace ABIMS
                 {
                     Nature = null;
                 }
-                Client client = new Client(Name, TypeClient,Nature, ActivityDomain, Adresse, PhoneNumber, SalesRevenu, Staff);
+                Client client = new Client(Name, TypeClient,Nature, ActivityDomain, Adresse, PhoneNumber, SalesRevenu, Staff,localCommentList, new BindingList<Contact>());
                 Clients.clients.ListClients.Add(client);
                 MessageBox.Show("Le client a bien été créé", "Creation client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.parent.Datagridview.Refresh();
@@ -116,6 +119,24 @@ namespace ABIMS
             this.tbTel.Text = "";
             this.comboBox1.Text = "";
             this.comboBox2.Text = "";
+        }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            this.localCommentList.Add(new Comment(this.tbAddComment.Text));
+            this.tbAddComment.Text = "";
+            this.lbComment.Refresh();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            Comment comm = (Comment)lbComment.SelectedItem;
+            if (comm != null&& MessageBox.Show("Êtes vous sûr de vouloir supprimer ce commentaire ?", "Supprimer Commentaire", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.localCommentList.Remove(comm);
+                this.lbComment.Refresh();
+            }
         }
     }
 }

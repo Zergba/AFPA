@@ -54,11 +54,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAddClient = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lbComment = new System.Windows.Forms.ListBox();
+            this.gbAddComment = new System.Windows.Forms.GroupBox();
+            this.tbAddComment = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.gbAddComment.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -338,8 +345,29 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // btnAddClient
+            // 
+            this.btnAddClient.Location = new System.Drawing.Point(6, 151);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(127, 23);
+            this.btnAddClient.TabIndex = 1;
+            this.btnAddClient.Text = "Ajouter un commentaire";
+            this.btnAddClient.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(6, 237);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(130, 23);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "Supprimer Commentaire";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.gbAddComment);
+            this.tabPage2.Controls.Add(this.lbComment);
+            this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -348,6 +376,33 @@
             this.tabPage2.Text = "Commentaires";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // lbComment
+            // 
+            this.lbComment.FormattingEnabled = true;
+            this.lbComment.Location = new System.Drawing.Point(150, 9);
+            this.lbComment.Name = "lbComment";
+            this.lbComment.Size = new System.Drawing.Size(349, 251);
+            this.lbComment.TabIndex = 3;
+            // 
+            // gbAddComment
+            // 
+            this.gbAddComment.Controls.Add(this.tbAddComment);
+            this.gbAddComment.Controls.Add(this.btnAddClient);
+            this.gbAddComment.Location = new System.Drawing.Point(4, 4);
+            this.gbAddComment.Name = "gbAddComment";
+            this.gbAddComment.Size = new System.Drawing.Size(140, 182);
+            this.gbAddComment.TabIndex = 4;
+            this.gbAddComment.TabStop = false;
+            this.gbAddComment.Text = "Ajout Commentaire";
+            // 
+            // tbAddComment
+            // 
+            this.tbAddComment.Location = new System.Drawing.Point(6, 19);
+            this.tbAddComment.Multiline = true;
+            this.tbAddComment.Name = "tbAddComment";
+            this.tbAddComment.Size = new System.Drawing.Size(123, 126);
+            this.tbAddComment.TabIndex = 2;
             // 
             // ParentClient
             // 
@@ -363,6 +418,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.gbAddComment.ResumeLayout(false);
+            this.gbAddComment.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -389,12 +447,17 @@
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.TabControl tabControl1;
         protected System.Windows.Forms.TabPage tabPage1;
-        protected System.Windows.Forms.TabPage tabPage2;
         protected System.Windows.Forms.Button button4;
         protected System.Windows.Forms.Button button3;
         protected System.Windows.Forms.Button button2;
         protected System.Windows.Forms.Button button1;
         protected System.Windows.Forms.DataGridView dataGridView1;
         protected System.Windows.Forms.ComboBox comboBox1;
+        protected System.Windows.Forms.TabPage tabPage2;
+        protected System.Windows.Forms.GroupBox gbAddComment;
+        protected System.Windows.Forms.TextBox tbAddComment;
+        protected System.Windows.Forms.Button btnAddClient;
+        protected System.Windows.Forms.ListBox lbComment;
+        protected System.Windows.Forms.Button button6;
     }
 }

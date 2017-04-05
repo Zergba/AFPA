@@ -36,6 +36,8 @@
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.gbAddComment.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -89,10 +91,6 @@
             // 
             this.tabPage1.Size = new System.Drawing.Size(509, 263);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Size = new System.Drawing.Size(509, 263);
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(228, 232);
@@ -116,6 +114,18 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Enabled = false;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Size = new System.Drawing.Size(509, 263);
+            // 
+            // btnAddClient
+            // 
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
+            // 
+            // button6
+            // 
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnValidModif
             // 
@@ -193,6 +203,9 @@
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.gbAddComment.ResumeLayout(false);
+            this.gbAddComment.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

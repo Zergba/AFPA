@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ABIMS
 {
-    class Comment
+    public class Comment
     {
         private String author;
         private DateTime date;
@@ -49,6 +49,16 @@ namespace ABIMS
             {
                 text = value;
             }
+        }
+        public Comment(String Text)
+        {
+            this.Text = Text;
+            this.Date = DateTime.UtcNow;
+        }
+
+        public override string ToString()
+        {
+            return this.Date.ToString() + " - " + this.Text;
         }
     }
 }

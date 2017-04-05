@@ -79,6 +79,7 @@ namespace ABIMS
             {
                 this.comboBox1.SelectedIndex = 1;
             }
+            this.lbComment.DataSource = new BindingSource(this.Client.CommentList,null);
         }
 
         /// <summary>
@@ -190,6 +191,23 @@ namespace ABIMS
         private void DetailClient_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.parent.WindowsList.Remove(this);
+        }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            this.client.CommentList.Add(new Comment(this.tbAddComment.Text));
+            this.tbAddComment.Text = "";
+            this.lbComment.Refresh();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Comment comm = (Comment)lbComment.SelectedItem;
+            if (comm != null&& MessageBox.Show("Êtes vous sûr de vouloir supprimer ce commentaire ?", "Supprimer Commentaire", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {             
+                    this.Client.CommentList.Remove(comm);
+                    this.lbComment.Refresh();
+            }
         }
     }
 }
