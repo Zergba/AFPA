@@ -66,41 +66,41 @@ namespace ABIMS
         {
            try
             {
-                String Name = tbName.Text;
-                String Adresse = tbAdress.Text;
-                String ActivityDomain = tbDA.Text;
-                String PhoneNumber = tbTel.Text;
-                Int32 Staff = Int32.Parse(tbStaff.Text);
-                Int32 SalesRevenu = Int32.Parse(tbCA.Text);
+                this.Client.Name = tbName.Text;
+                this.Client.Adresse = tbAdress.Text;
+                this.Client.ActivityDomain = tbDA.Text;
+                this.Client.PhoneNumber = tbTel.Text;
+                this.Client.Staff = Int32.Parse(tbStaff.Text);
+                this.Client.SalesRevenu = Int32.Parse(tbCA.Text);
                 String typeString = comboBox1.Text;
-                String TypeClient;
-                String Nature;
+                
                 if (typeString == "Public")
                 {
-                    TypeClient = Client.TYPE_PUBLIC;
+                    this.Client.Type = Client.TYPE_PUBLIC;
                 }
                 else if (typeString == "Privé")
                 {
-                    TypeClient = Client.TYPE_PRIVATE;
+                    this.Client.Type = Client.TYPE_PRIVATE;
                 }else
                 {
-                    TypeClient = null;
+                    this.Client.Type = null;
                 }
+
                 String natureString = comboBox2.Text;
                 if (natureString == "Principale")
                 {
-                    Nature = Client.NATURE_MAIN;
+                    this.Client.Nature = Client.NATURE_MAIN;
                 }
                 else if (natureString == "Secondaire")
                 {
-                    Nature = Client.NATURE_SECONDARY;
+                    this.Client.Nature = Client.NATURE_SECONDARY;
                 }
                 else if (natureString == "Ancienne")
                 {
-                    Nature = Client.NATURE_OLD;
+                    this.Client.Nature = Client.NATURE_OLD;
                 }else
                 {
-                    Nature = null;
+                    this.Client.Nature = null;
                 }
                
                 Clients.clients.ListClients.Add(Client);
