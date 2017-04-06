@@ -82,7 +82,7 @@ namespace ABIMS
         /// <summary>
         /// peuple le datagrid depuis la source
         /// </summary>
-        private void populateGrid()
+        private void initGrid(BindingSource source)
         {
             this.dataGridView1.DataSource = source;
             this.dataGridView1.Refresh();
@@ -247,7 +247,7 @@ namespace ABIMS
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            populateGrid();
+            initGrid(this.source);
         }
         /// <summary>
         /// vide le datagridview

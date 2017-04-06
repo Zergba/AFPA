@@ -46,11 +46,11 @@
             // 
             // tbStaff
             // 
-            this.tbStaff.Enabled = false;
+            this.tbStaff.ReadOnly = true;
             // 
             // tbCA
             // 
-            this.tbCA.Enabled = false;
+            this.tbCA.ReadOnly = true;
             // 
             // comboBox2
             // 
@@ -59,23 +59,23 @@
             // 
             // tbTel
             // 
-            this.tbTel.Enabled = false;
+            this.tbTel.ReadOnly = true;
             // 
             // tbAdress
             // 
-            this.tbAdress.Enabled = false;
+            this.tbAdress.ReadOnly = true;
             // 
             // tbDA
             // 
-            this.tbDA.Enabled = false;
+            this.tbDA.ReadOnly = true;
             // 
             // tbName
             // 
-            this.tbName.Enabled = false;
+            this.tbName.ReadOnly = true;
             // 
             // tbId
             // 
-            this.tbId.Enabled = false;
+            this.tbId.ReadOnly = true;
             // 
             // label1
             // 

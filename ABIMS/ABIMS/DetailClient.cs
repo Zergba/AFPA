@@ -108,12 +108,12 @@ namespace ABIMS
         /// <param name="e"></param>
         private void cbModifications_CheckedChanged(object sender, EventArgs e)
         {            
-            this.tbName.Enabled = !this.tbName.Enabled;
-            this.tbAdress.Enabled = !this.tbAdress.Enabled;
-            this.tbCA.Enabled = !this.tbCA.Enabled;
-            this.tbDA.Enabled = !this.tbDA.Enabled;
-            this.tbStaff.Enabled = !this.tbStaff.Enabled;
-            this.tbTel.Enabled = !this.tbTel.Enabled;
+            this.tbName.ReadOnly = !this.tbName.ReadOnly;
+            this.tbAdress.ReadOnly = !this.tbAdress.ReadOnly;
+            this.tbCA.ReadOnly = !this.tbCA.ReadOnly;
+            this.tbDA.ReadOnly = !this.tbDA.ReadOnly;
+            this.tbStaff.ReadOnly = !this.tbStaff.ReadOnly;
+            this.tbTel.ReadOnly = !this.tbTel.ReadOnly;
             this.comboBox1.Enabled = !this.comboBox1.Enabled;
             this.comboBox2.Enabled = !this.comboBox2.Enabled;
             this.btnValidModif.Enabled = !this.btnValidModif.Enabled;
