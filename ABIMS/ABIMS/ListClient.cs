@@ -185,11 +185,14 @@ namespace ABIMS
         private void button8_Click(object sender, EventArgs e)
         {
             List<DetailClient> temp = new List<DetailClient>();
-            foreach(DetailClient dc in WindowsList)
+            foreach (ListClient lc in parent.ListWindowListClient)
             {
-                if (!dc.CbKeepOpen.Checked)
+                foreach (DetailClient dc in lc.WindowsList)
                 {
-                    temp.Add(dc);
+                    if (!dc.CbKeepOpen.Checked)
+                    {
+                        temp.Add(dc);
+                    }
                 }
             }
             foreach(DetailClient dc in temp)
