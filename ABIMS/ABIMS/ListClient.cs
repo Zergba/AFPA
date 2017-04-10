@@ -156,7 +156,7 @@ namespace ABIMS
         /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
-            AjoutClient ac = new AjoutClient(this);
+            AjoutClient ac = new AjoutClient(new Client(),this);
             ac.ShowDialog();
         }
         /// <summary>

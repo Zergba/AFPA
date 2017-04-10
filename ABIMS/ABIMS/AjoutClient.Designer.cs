@@ -48,26 +48,12 @@
             this.tbId.Enabled = false;
            
          
-            // 
-            // button3
-            // 
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button1
-            // 
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+           
             // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            // 
-            // btnAddClient
-            // 
-            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
-            // 
-            // button6
-            // 
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+           
             // 
             // btnValidCreationClient
             // 

@@ -195,6 +195,7 @@
             this.Controls.Add(this.button1);
             this.Name = "AjoutContact";
             this.Text = "ABIMS - Ajout contact";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

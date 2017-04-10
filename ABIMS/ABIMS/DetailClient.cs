@@ -16,7 +16,7 @@ namespace ABIMS
         /// <summary>
         /// fenetre parente
         /// </summary>
-        private ListClient parent;
+       
 
         /// <summary>
         /// simple accesseur en readonly
@@ -34,14 +34,10 @@ namespace ABIMS
         /// </summary>
         /// <param name="client"></param>
         /// <param name="parent"></param>
-        public DetailClient(Client client, ListClient parent)
+        public DetailClient(Client client, ListClient parent):base(client, parent)
         {
-            this.parent = parent;
-            this.Client = client;
-       
             InitializeComponent();
             loadClient();
-            initGrid();
         }
 
 
@@ -79,11 +75,7 @@ namespace ABIMS
             }
             this.lbComment.DataSource = new BindingSource(this.Client.CommentList,null);
         }
-        private void initGrid()
-        {
-            this.dataGridViewContact.DataSource = new BindingSource(this.Client.ContactList, null);
-            this.dataGridViewContact.Refresh();
-        }
+       
 
         /// <summary>
         /// permet d'alterner l'etat des champs en fonction de la checkbox "modification"
@@ -195,37 +187,6 @@ namespace ABIMS
         private void DetailClient_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.parent.WindowsList.Remove(this);
-        }
-
-        private void btnAddClient_Click(object sender, EventArgs e)
-        {
-            this.Client.CommentList.Add(new Comment(this.tbAddComment.Text));
-            this.tbAddComment.Text = "";
-            this.lbComment.Refresh();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Comment comm = (Comment)lbComment.SelectedItem;
-            if (comm != null&& MessageBox.Show("Êtes vous sûr de vouloir supprimer ce commentaire ?", "Supprimer Commentaire", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {             
-                    this.Client.CommentList.Remove(comm);
-                    this.lbComment.Refresh();
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AjoutContact ac = new AjoutContact(Client, this.dataGridViewContact);
-            ac.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow row = this.dataGridViewContact.CurrentRow;
-            Contact contact = (Contact)row.DataBoundItem;
-            Client.ContactList.Remove(contact);
-            dataGridViewContact.Refresh();
         }
     }
 }

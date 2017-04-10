@@ -93,7 +93,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Détail Client";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            
             // 
             // label9
             // 
@@ -103,7 +103,7 @@
             this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 17;
             this.label9.Text = "Effectif";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+           
             // 
             // label8
             // 
@@ -113,7 +113,7 @@
             this.label8.Size = new System.Drawing.Size(82, 13);
             this.label8.TabIndex = 16;
             this.label8.Text = "Chiffre d\'affaires";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+           
             // 
             // label7
             // 
@@ -123,7 +123,7 @@
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 15;
             this.label7.Text = "Nature";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+           
             // 
             // label6
             // 
@@ -133,7 +133,7 @@
             this.label6.Size = new System.Drawing.Size(58, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "Telephone";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            
             // 
             // label5
             // 
@@ -143,7 +143,7 @@
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Adresse";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+           
             // 
             // label4
             // 
@@ -153,7 +153,7 @@
             this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Domaine d\'activité";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+           
             // 
             // tbStaff
             // 
@@ -161,7 +161,7 @@
             this.tbStaff.Name = "tbStaff";
             this.tbStaff.Size = new System.Drawing.Size(310, 20);
             this.tbStaff.TabIndex = 11;
-            this.tbStaff.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            
             // 
             // tbCA
             // 
@@ -169,7 +169,7 @@
             this.tbCA.Name = "tbCA";
             this.tbCA.Size = new System.Drawing.Size(310, 20);
             this.tbCA.TabIndex = 10;
-            this.tbCA.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+           
             // 
             // comboBox2
             // 
@@ -182,7 +182,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(310, 21);
             this.comboBox2.TabIndex = 9;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+           
             // 
             // tbTel
             // 
@@ -190,7 +190,7 @@
             this.tbTel.Name = "tbTel";
             this.tbTel.Size = new System.Drawing.Size(310, 20);
             this.tbTel.TabIndex = 8;
-            this.tbTel.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+          
             // 
             // tbAdress
             // 
@@ -199,7 +199,7 @@
             this.tbAdress.Name = "tbAdress";
             this.tbAdress.Size = new System.Drawing.Size(310, 50);
             this.tbAdress.TabIndex = 7;
-            this.tbAdress.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+          
             // 
             // tbDA
             // 
@@ -207,7 +207,7 @@
             this.tbDA.Name = "tbDA";
             this.tbDA.Size = new System.Drawing.Size(310, 20);
             this.tbDA.TabIndex = 6;
-            this.tbDA.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
+           
             // 
             // comboBox1
             // 
@@ -219,7 +219,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(310, 21);
             this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+           
             // 
             // label3
             // 
@@ -229,7 +229,7 @@
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Type";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+           
             // 
             // tbName
             // 
@@ -237,7 +237,7 @@
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(310, 20);
             this.tbName.TabIndex = 3;
-            this.tbName.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
+          
             // 
             // label2
             // 
@@ -247,7 +247,7 @@
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Raison Sociale";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+           
             // 
             // tbId
             // 
@@ -255,7 +255,7 @@
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(310, 20);
             this.tbId.TabIndex = 1;
-            this.tbId.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+           
             // 
             // label1
             // 
@@ -265,7 +265,7 @@
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+          
             // 
             // tabControl1
             // 
@@ -276,7 +276,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(513, 289);
             this.tabControl1.TabIndex = 1;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+          
             // 
             // tabPage1
             // 
@@ -291,7 +291,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Contacts";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.Contacts_Click);
+          
             // 
             // button3
             // 
@@ -311,7 +311,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Modifier le contact";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+          
             // 
             // button1
             // 
@@ -332,7 +332,7 @@
             this.dataGridViewContact.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewContact.Size = new System.Drawing.Size(505, 226);
             this.dataGridViewContact.TabIndex = 0;
-            this.dataGridViewContact.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+           
             // 
             // tabPage2
             // 
@@ -346,7 +346,7 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Commentaires";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+           
             // 
             // gbAddComment
             // 
@@ -375,6 +375,7 @@
             this.btnAddClient.TabIndex = 1;
             this.btnAddClient.Text = "Ajouter un commentaire";
             this.btnAddClient.UseVisualStyleBackColor = true;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
             // lbComment
             // 
@@ -392,6 +393,7 @@
             this.button6.TabIndex = 2;
             this.button6.Text = "Supprimer Commentaire";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // ParentClient
             // 

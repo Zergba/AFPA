@@ -15,6 +15,7 @@ namespace ABIMS
     {
 
         private Client client;
+        protected ListClient parent;
 
         public Client Client
         {
@@ -29,144 +30,53 @@ namespace ABIMS
             }
         }
 
-        public ParentClient()
+        public ParentClient(Client client, ListClient parent)
         {
+            this.parent = parent;
+            this.Client = client;
             InitializeComponent();
+            initGrid();
         }
-
-        private void Contacts_Click(object sender, EventArgs e)
+        private void initGrid()
         {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
+            this.dataGridViewContact.DataSource = new BindingSource(this.Client.ContactList, null);
+            this.dataGridViewContact.Refresh();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            DataGridViewRow row = this.dataGridViewContact.CurrentRow;
+            Contact contact = (Contact)row.DataBoundItem;
+            Client.ContactList.Remove(contact);
+            dataGridViewContact.Refresh();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            AjoutContact ac = new AjoutContact(Client, this.dataGridViewContact);
+            ac.ShowDialog();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+
+        private void btnAddClient_Click(object sender, EventArgs e)
         {
-
+            this.Client.CommentList.Add(new Comment(this.tbAddComment.Text));
+            this.tbAddComment.Text = "";
+            this.lbComment.Refresh();
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
+      
+
+
+        private void button6_Click(object sender, EventArgs e)
         {
-
+            Comment comm = (Comment)lbComment.SelectedItem;
+            if (comm != null && MessageBox.Show("Êtes vous sûr de vouloir supprimer ce commentaire ?", "Supprimer Commentaire", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.Client.CommentList.Remove(comm);
+                this.lbComment.Refresh();
+            }
         }
-    }
+    }   
 }
