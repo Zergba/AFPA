@@ -49,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -281,7 +280,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
@@ -295,20 +293,9 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.Contacts_Click);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(134, 233);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(135, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Valider modifications";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(275, 233);
+            this.button3.Location = new System.Drawing.Point(377, 232);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 23);
             this.button3.TabIndex = 3;
@@ -415,6 +402,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ParentClient";
             this.Text = "ParentClient";
+            this.TopMost = true;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -449,7 +437,6 @@
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.TabControl tabControl1;
         protected System.Windows.Forms.TabPage tabPage1;
-        protected System.Windows.Forms.Button button4;
         protected System.Windows.Forms.Button button3;
         protected System.Windows.Forms.Button button2;
         protected System.Windows.Forms.Button button1;

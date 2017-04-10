@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ABIMS.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,22 @@ namespace ABIMS
 {
     public partial class ParentClient : Form
     {
+
+        private Client client;
+
+        public Client Client
+        {
+            get
+            {
+                return client;
+            }
+
+            set
+            {
+                client = value;
+            }
+        }
+
         public ParentClient()
         {
             InitializeComponent();

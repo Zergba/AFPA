@@ -15,20 +15,7 @@ namespace ABIMS
         /// fenetre parente
         /// </summary>
         private ListClient parent;
-        private Client client;
-
-        public Client Client
-        {
-            get
-            {
-                return client;
-            }
-
-            set
-            {
-                client = value;
-            }
-        }
+        
 
         /// <summary>
         /// constructeur

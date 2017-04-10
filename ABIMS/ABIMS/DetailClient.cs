@@ -12,10 +12,6 @@ namespace ABIMS
     public partial class DetailClient : ABIMS.ParentClient
     {
 
-        /// <summary>
-        /// client concerné par la fiche client
-        /// </summary>
-        private Client client;
 
         /// <summary>
         /// fenetre parente
@@ -48,18 +44,6 @@ namespace ABIMS
             initGrid();
         }
 
-        public Client Client
-        {
-            get
-            {
-                return client;
-            }
-
-            set
-            {
-                client = value;
-            }
-        }
 
         /// <summary>
         /// initialise les champs avec les infos du client
@@ -195,7 +179,7 @@ namespace ABIMS
                     Clients.clients.RemoveClient(this.Client);
                     MessageBox.Show("Le client a bien été supprimé", "Supprimer Client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.parent.Datagridview.Refresh();
-                    this.parent.deleteLastClientList(client);
+                    this.parent.deleteLastClientList(Client);
                     this.parent.closeDeletedClient(this.Client);
                 }catch(Exception ex)
                 {
@@ -215,7 +199,7 @@ namespace ABIMS
 
         private void btnAddClient_Click(object sender, EventArgs e)
         {
-            this.client.CommentList.Add(new Comment(this.tbAddComment.Text));
+            this.Client.CommentList.Add(new Comment(this.tbAddComment.Text));
             this.tbAddComment.Text = "";
             this.lbComment.Refresh();
         }

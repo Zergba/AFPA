@@ -46,6 +46,8 @@
             // tbId
             // 
             this.tbId.Enabled = false;
+           
+         
             // 
             // button3
             // 

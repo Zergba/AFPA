@@ -90,11 +90,8 @@
             // tabPage1
             // 
             this.tabPage1.Size = new System.Drawing.Size(509, 263);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(228, 232);
-            this.button4.Size = new System.Drawing.Size(119, 23);
+           
+           
             // 
             // button3
             // 
