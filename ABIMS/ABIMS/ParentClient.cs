@@ -14,9 +14,17 @@ namespace ABIMS
     public partial class ParentClient : Form
     {
 
-        private Client client;
+        protected Client client;
         protected ListClient parent;
 
+
+        public DataGridView dgv
+        {
+            get
+            {
+                return dataGridViewContact;
+            }
+        }
         public Client Client
         {
             get
@@ -35,8 +43,9 @@ namespace ABIMS
             this.parent = parent;
             this.Client = client;
             InitializeComponent();
-            initGrid();
+            this.initGrid();
         }
+
         private void initGrid()
         {
             this.dataGridViewContact.DataSource = new BindingSource(this.Client.ContactList, null);
@@ -47,14 +56,14 @@ namespace ABIMS
         {
             DataGridViewRow row = this.dataGridViewContact.CurrentRow;
             Contact contact = (Contact)row.DataBoundItem;
-            Client.ContactList.Remove(contact);
-            dataGridViewContact.Refresh();
+            this.Client.ContactList.Remove(contact);
+            this.dataGridViewContact.Refresh();
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AjoutContact ac = new AjoutContact(Client, this.dataGridViewContact);
+            AjoutContact ac = new AjoutContact(this.Client, this);
             ac.ShowDialog();
         }
 
@@ -77,6 +86,14 @@ namespace ABIMS
                 this.Client.CommentList.Remove(comm);
                 this.lbComment.Refresh();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = this.dataGridViewContact.CurrentRow;
+            Contact contact = (Contact)row.DataBoundItem;
+            DetailContact dc = new DetailContact(contact, this.Client, this);
+            dc.ShowDialog();
         }
     }   
 }

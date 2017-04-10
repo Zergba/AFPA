@@ -58,6 +58,18 @@
     <Compile Include="AjoutContact.Designer.cs">
       <DependentUpon>AjoutContact.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetailContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailContact.Designer.cs">
+      <DependentUpon>DetailContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentContact.Designer.cs">
+      <DependentUpon>ParentContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs" />
     <Compile Include="Clients.cs" />
     <Compile Include="Comment.cs" />
@@ -99,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutContact.resx">
       <DependentUpon>AjoutContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailContact.resx">
+      <DependentUpon>DetailContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentContact.resx">
+      <DependentUpon>ParentContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailClient.resx">
       <DependentUpon>DetailClient.cs</DependentUpon>

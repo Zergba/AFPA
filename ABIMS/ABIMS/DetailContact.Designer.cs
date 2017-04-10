@@ -1,6 +1,6 @@
 ﻿namespace ABIMS
 {
-    partial class AjoutContact
+    partial class DetailContact
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -35,11 +35,12 @@
             // 
             this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
             // 
-            // AjoutContact
+            // DetailContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(383, 240);
-            this.Name = "AjoutContact";
+            this.Name = "DetailContact";
+            this.Text = "ABIMS - Modifier contact";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

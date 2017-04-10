@@ -171,7 +171,7 @@ namespace ABIMS
                     Clients.clients.RemoveClient(this.Client);
                     MessageBox.Show("Le client a bien été supprimé", "Supprimer Client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.parent.Datagridview.Refresh();
-                    this.parent.deleteLastClientList(Client);
+                    this.parent.deleteLastClientList(this.Client);
                     this.parent.closeDeletedClient(this.Client);
                 }catch(Exception ex)
                 {

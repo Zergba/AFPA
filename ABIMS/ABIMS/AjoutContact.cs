@@ -4,64 +4,24 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ABIMS
 {
-    public partial class AjoutContact : Form
+    public partial class AjoutContact : ABIMS.ParentContact
     {
-        private Client client;
-        DataGridView dgv;
-       
-        public AjoutContact(Client client, DataGridView dgv)
-        {
-            this.Dgv = dgv;
-            this.Client = client;
+        public AjoutContact(Client client, ParentClient parent):base(new Contact(client, null,null,null,null,0), client, parent)
+        { 
             InitializeComponent();
-            this.tbIdContact.Text = Contact.CountId.ToString();
-            this.tbClient.Text = (this.Client.Name!=null)?this.Client.Name:"sans nom";
-        }
-       
-
-        public Client Client
-        {
-            get
-            {
-                return client;
-            }
-
-            set
-            {
-                client = value;
-            }
+            this.tbIdContact.Text = Contact.Id.ToString();
+            this.tbClient.Text = (this.Client.Name != null) ? this.Client.Name : "sans nom";
         }
 
-        public DataGridView Dgv
+        protected override void btnValidate_Click(object sender, EventArgs e)
         {
-            get
-            {
-                return dgv;
-            }
-
-            set
-            {
-                dgv = value;
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Client.ContactList.Add(new Contact(this.Client, tbName.Text, tbFonction.Text, tbPhone.Text, tbEmail.Text, 0));
-            this.Dgv.Refresh();
-            this.Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            this.Client.ContactList.Add(this.Contact);
+            base.btnValidate_Click(sender, e); 
         }
     }
 }
