@@ -32,8 +32,24 @@ namespace ABIMS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListClient));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUnClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voirLesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerLesClientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.réouvrirLeClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fermerToutesLesFenêtresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.afficherListeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viderListeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.åProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.åProposToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
@@ -64,7 +80,9 @@ namespace ABIMS
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.clientsToolStripMenuItem,
+            this.åProposToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1166, 24);
@@ -73,9 +91,125 @@ namespace ABIMS
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quitterToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(125, 20);
-            this.toolStripMenuItem1.Text = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(54, 20);
+            this.toolStripMenuItem1.Text = "Fichier";
+            // 
+            // quitterToolStripMenuItem
+            // 
+            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.quitterToolStripMenuItem.Text = "Quitter";
+            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            // 
+            // clientsToolStripMenuItem
+            // 
+            this.clientsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripSeparator1,
+            this.afficherListeToolStripMenuItem,
+            this.viderListeToolStripMenuItem});
+            this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
+            this.clientsToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.clientsToolStripMenuItem.Text = "Clients";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterUnClientToolStripMenuItem,
+            this.voirLesClientsToolStripMenuItem,
+            this.supprimerLesClientsToolStripMenuItem});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem2.Text = "Gestion client";
+            // 
+            // ajouterUnClientToolStripMenuItem
+            // 
+            this.ajouterUnClientToolStripMenuItem.Name = "ajouterUnClientToolStripMenuItem";
+            this.ajouterUnClientToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.ajouterUnClientToolStripMenuItem.Text = "Ajouter un client";
+            this.ajouterUnClientToolStripMenuItem.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // voirLesClientsToolStripMenuItem
+            // 
+            this.voirLesClientsToolStripMenuItem.Name = "voirLesClientsToolStripMenuItem";
+            this.voirLesClientsToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.voirLesClientsToolStripMenuItem.Text = "voir les clients";
+            this.voirLesClientsToolStripMenuItem.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // supprimerLesClientsToolStripMenuItem
+            // 
+            this.supprimerLesClientsToolStripMenuItem.Name = "supprimerLesClientsToolStripMenuItem";
+            this.supprimerLesClientsToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.supprimerLesClientsToolStripMenuItem.Text = "Supprimer les clients";
+            this.supprimerLesClientsToolStripMenuItem.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox1,
+            this.réouvrirLeClientToolStripMenuItem,
+            this.fermerToutesLesFenêtresToolStripMenuItem});
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem3.Text = "Fenêtres";
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            // 
+            // réouvrirLeClientToolStripMenuItem
+            // 
+            this.réouvrirLeClientToolStripMenuItem.Name = "réouvrirLeClientToolStripMenuItem";
+            this.réouvrirLeClientToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.réouvrirLeClientToolStripMenuItem.Text = "Réouvrir le client";
+            this.réouvrirLeClientToolStripMenuItem.Click += new System.EventHandler(this.réouvrirLeClientToolStripMenuItem_Click);
+            // 
+            // fermerToutesLesFenêtresToolStripMenuItem
+            // 
+            this.fermerToutesLesFenêtresToolStripMenuItem.Name = "fermerToutesLesFenêtresToolStripMenuItem";
+            this.fermerToutesLesFenêtresToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.fermerToutesLesFenêtresToolStripMenuItem.Text = "Fermer toutes les fenêtres";
+            this.fermerToutesLesFenêtresToolStripMenuItem.Click += new System.EventHandler(this.fermerToutesLesFenêtresToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // afficherListeToolStripMenuItem
+            // 
+            this.afficherListeToolStripMenuItem.Name = "afficherListeToolStripMenuItem";
+            this.afficherListeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.afficherListeToolStripMenuItem.Text = "Afficher Liste";
+            this.afficherListeToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // viderListeToolStripMenuItem
+            // 
+            this.viderListeToolStripMenuItem.Name = "viderListeToolStripMenuItem";
+            this.viderListeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viderListeToolStripMenuItem.Text = "Vider Liste";
+            this.viderListeToolStripMenuItem.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // åProposToolStripMenuItem
+            // 
+            this.åProposToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.åProposToolStripMenuItem1});
+            this.åProposToolStripMenuItem.Name = "åProposToolStripMenuItem";
+            this.åProposToolStripMenuItem.Size = new System.Drawing.Size(24, 20);
+            this.åProposToolStripMenuItem.Text = "?";
+            // 
+            // åProposToolStripMenuItem1
+            // 
+            this.åProposToolStripMenuItem1.Name = "åProposToolStripMenuItem1";
+            this.åProposToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.åProposToolStripMenuItem1.Text = "Å Propos";
+            this.åProposToolStripMenuItem1.Click += new System.EventHandler(this.åProposToolStripMenuItem1_Click);
             // 
             // groupBox1
             // 
@@ -291,6 +425,7 @@ namespace ABIMS
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListClient";
             this.Text = "ABIMS - Liste de clients";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ListClient_FormClosing);
@@ -330,5 +465,20 @@ namespace ABIMS
         protected System.Windows.Forms.Button button7;
         protected System.Windows.Forms.ComboBox cbbLastsSeen;
         protected System.Windows.Forms.DataGridView dataGridView1;
+        private ToolStripMenuItem quitterToolStripMenuItem;
+        private ToolStripMenuItem clientsToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem ajouterUnClientToolStripMenuItem;
+        private ToolStripMenuItem voirLesClientsToolStripMenuItem;
+        private ToolStripMenuItem supprimerLesClientsToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem3;
+        private ToolStripMenuItem åProposToolStripMenuItem;
+        private ToolStripMenuItem åProposToolStripMenuItem1;
+        private ToolStripComboBox toolStripComboBox1;
+        private ToolStripMenuItem réouvrirLeClientToolStripMenuItem;
+        private ToolStripMenuItem fermerToutesLesFenêtresToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem afficherListeToolStripMenuItem;
+        private ToolStripMenuItem viderListeToolStripMenuItem;
     }
 }

@@ -79,7 +79,7 @@ namespace ABIMS
                     this.Client.Nature = null;
                 }
                
-                Clients.clients.ListClients.Add(this.Client);
+                Clients.clients.AddClient(this.Client);
                 MessageBox.Show("Le client a bien été créé", "Creation client OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.parent.Datagridview.Refresh();
                 if (this.checkBox1.Checked)//si checkbox "voir fiche client" est cochée

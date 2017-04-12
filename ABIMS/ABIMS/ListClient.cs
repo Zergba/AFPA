@@ -122,6 +122,8 @@ namespace ABIMS
         {
             if (this.cbbLastsSeen.Items.Count >= 10) this.cbbLastsSeen.Items.RemoveAt(0);
             if(!this.cbbLastsSeen.Items.Contains(client))this.cbbLastsSeen.Items.Add(client);
+            if (this.toolStripComboBox1.Items.Count >= 10) this.toolStripComboBox1.Items.RemoveAt(0);
+            if (!this.toolStripComboBox1.Items.Contains(client)) this.toolStripComboBox1.Items.Add(client);
         }
         /// <summary>
         /// enleve de l'historique de clients consultés un client qui aurait été supprimé
@@ -329,6 +331,31 @@ namespace ABIMS
             {
                 tbSearch.Text = "";
             }
+        }
+
+        private void réouvrirLeClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (toolStripComboBox1.SelectedItem != null)
+            {
+                Client client = (Client)toolStripComboBox1.SelectedItem;
+                DetailClient dc = new DetailClient(client, this);
+                dc.Show();
+            }
+        }
+
+        private void fermerToutesLesFenêtresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.button8_Click(sender, e);
+        }
+
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Etes vous sur de vouloir quitter ?", "Quitter l'application",MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)==DialogResult.OK) Application.Exit();
+        }
+
+        private void åProposToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new About().ShowDialog();
         }
     }
 }

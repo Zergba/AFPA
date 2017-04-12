@@ -37,7 +37,11 @@ namespace ABIMS
                 client = value;
             }
         }
-
+        public ParentClient()//only for the visual studio designer, do not use
+        {
+            InitializeComponent();
+            
+        }
         public ParentClient(Client client, ListClient parent)
         {
             this.parent = parent;

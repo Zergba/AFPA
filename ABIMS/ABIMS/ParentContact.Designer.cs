@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParentContact));
             this.btnValidate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
@@ -192,6 +193,7 @@
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnValidate);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ParentContact";
             this.Text = "ABIMS - Ajout contact";
             this.TopMost = true;
