@@ -66,12 +66,42 @@ namespace ABIMS
                 return this.dataGridView1;
             }
         }
+
+        private void openDetailClient(Client client)
+        {
+            Boolean isOpen = false;
+            DetailClient dcTemp = null;
+            foreach(ListClient lc in this.parent.ListWindowListClient)
+            {
+                foreach (DetailClient testClient in lc.windowsList)
+                {
+                    if (testClient.Client == client)
+                    {
+                        dcTemp = testClient;
+                        isOpen = true;
+                    }
+                }
+            }
+           
+            if (isOpen)
+            {
+                dcTemp.Activate();
+            }else
+            {
+                DetailClient dc = new DetailClient(client, this);
+                updateLastClientList(client);
+                WindowsList.Add(dc);
+                dc.Show();
+                dc.Activate();
+            }  
+        }
         /// <summary>
         /// constructeur
         /// </summary>
         /// <param name="parent"></param>
         public ListClient(Form1 parent)
         {
+            this.MdiParent = parent;
             this.parent = parent; 
             this.WindowsList = new List<DetailClient>();
             this.LastClientList = new List<Client>();
@@ -143,11 +173,7 @@ namespace ABIMS
         {
             if (dataGridView1.CurrentRow != null)
             {
-                Client client = (Client)dataGridView1.CurrentRow.DataBoundItem;
-                DetailClient dc = new DetailClient(client, this);
-                updateLastClientList(client);
-                WindowsList.Add(dc);
-                dc.Show();
+                openDetailClient((Client)dataGridView1.CurrentRow.DataBoundItem);             
             }  
         }
 
@@ -172,11 +198,7 @@ namespace ABIMS
             DataGridViewSelectedRowCollection SelectedRows = dataGridView1.SelectedRows;
             foreach(DataGridViewRow row in SelectedRows)
             {
-                Client client = (Client)row.DataBoundItem;
-                DetailClient dc = new DetailClient(client,this);
-                updateLastClientList(client);
-                WindowsList.Add(dc);
-                dc.Show();
+                openDetailClient((Client)row.DataBoundItem);
             }
         }
         /// <summary>
@@ -240,9 +262,7 @@ namespace ABIMS
         {
             if (cbbLastsSeen.SelectedItem != null)
             {
-                Client client = (Client)cbbLastsSeen.SelectedItem;
-                DetailClient dc = new DetailClient(client, this);
-                dc.Show();
+                openDetailClient((Client)cbbLastsSeen.SelectedItem);
             }
         }
         /// <summary>
@@ -337,9 +357,7 @@ namespace ABIMS
         {
             if (toolStripComboBox1.SelectedItem != null)
             {
-                Client client = (Client)toolStripComboBox1.SelectedItem;
-                DetailClient dc = new DetailClient(client, this);
-                dc.Show();
+                openDetailClient((Client)toolStripComboBox1.SelectedItem);
             }
         }
 

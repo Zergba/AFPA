@@ -92,7 +92,7 @@
             this.tbVersion.ReadOnly = true;
             this.tbVersion.Size = new System.Drawing.Size(181, 20);
             this.tbVersion.TabIndex = 7;
-            this.tbVersion.Text = "0.42";
+            this.tbVersion.Text = "0.43";
             // 
             // tbAuthor
             // 

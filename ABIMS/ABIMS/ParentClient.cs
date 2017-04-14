@@ -44,6 +44,7 @@ namespace ABIMS
         }
         public ParentClient(Client client, ListClient parent)
         {
+            this.MdiParent = parent.MdiParent;
             this.parent = parent;
             this.Client = client;
             InitializeComponent();
